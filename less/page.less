@@ -1,0 +1,33 @@
+@import "varsAndMixins.less";
+
+// ================================================================= rui 테스트페이지
+#page_rui{
+  width: 900px; margin: 0 auto; padding: 30px 0;
+  h1 {
+    font-size: 24px; font-weight: bold; color: @color_slategray_2;
+    padding: 10px 0;
+  }
+  .test_ul {
+    list-style: none; margin: 0; padding: 0;
+  }
+  .test_article {
+    padding: 30px 0; border-top: 2px solid @color_slategray_4;
+    h2 {
+      font-size: 20px; font-weight: bold; color: @color_slategray_2;
+    }
+    .test_ul {
+      margin-top: 20px;
+      .test_li {
+        margin-bottom: 20px; 
+      }//li
+    }//.test_ul
+  }//.test_article
+  
+  // select 우측 정렬용 가로사이즈 지정
+  .rui_select_1.right_select {
+    width: 150px;
+  }
+  .rui_select_2 {
+    width: 150px;
+  }
+}//#page_rui
