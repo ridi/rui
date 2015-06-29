@@ -935,29 +935,34 @@
   [class^="icon-"], [class*=" icon-"]{
     padding-right: 4px; font-size: 20px; vertical-align: -7%; color: @color_dodgerblue_1;
   }
-  .parent_text, .children_text{
-    font-size: 20px; font-weight: bold; color: black;
-  }
-  .children_title{
-    .ruicon-arrow_8_right{
-      padding: 0 5px; color: @color_slategray_4;
+  .parent_title, .children_text{
+    display: inline-block;
+    &, a{
+      font-size: 20px; font-weight: bold; color: black;
     }
-    .children_text{ display: inline-block; }
+  }
+  .ruicon-arrow_8_right{
+    display: inline-block; vertical-align: top; padding: 1px 5px 0;
+    font-size: 16px; color: @color_slategray_4;
   }
   &.has_children{
     .parent_title{
-      .parent_text{ color: @color_slategray_5; } 
-      [class^="icon-"], [class*=" icon-"]{
-        color: @color_slategray_4; .transition(~"color .2s");
-      }
-    }
+      a{
+        color: @color_slategray_5;
+        [class^="icon-"], [class*=" icon-"]{
+          color: @color_slategray_4; .transition(~"color .2s");
+        }
+      }//a
+    }//.parent_title
     &:hover{
       .parent_title{
-        .parent_text{ color: @color_slategray_1; } 
-        [class^="icon-"], [class*=" icon-"]{
-          color: @color_slategray_9;
-        }
-      }
+        a{
+          color: @color_slategray_1;
+          [class^="icon-"], [class*=" icon-"]{
+            color: @color_slategray_9;
+          }
+        }//a
+      }//.parent_title
     }//&:hover
   }//&.has_children
 }//.rui_title_3
