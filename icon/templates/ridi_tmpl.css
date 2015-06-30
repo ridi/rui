@@ -8,7 +8,8 @@
 }
 <% } %>@font-face {
   font-family:"<%= fontBaseName %>";
-  src:<%= fontSrc2 %>;
+  src:<%= fontRawSrcs[1][1] %>,
+      <%= fontRawSrcs[1][2] %>;
   font-weight:normal;
   font-style:normal;
 }
@@ -24,7 +25,7 @@
   text-transform:none;
   line-height:1;
 
-  text-rendering:optimizeLegibility;
+  text-rendering:auto;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
 }
