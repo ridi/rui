@@ -31,6 +31,8 @@ module.exports = function (grunt) {
         options: {
           normalize: true,
           font: 'ruicon',
+          htmlDemo: true,
+          htmlDemoTemplate: 'icon/templates/ridi_tmpl.html',
           destHtml: 'icon',
           stylesheet: 'less',
           template: 'icon/templates/ridi_tmpl.css',
