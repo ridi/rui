@@ -6,7 +6,7 @@ $(function() {
       return false;
     });
     $('.rui_radio_label').append("<div class='before'></div><div class='after'></div>");
-    $('.rui_checkbox_label').append("<div class='before'></div><div class='after'><span class='icon-check_1'></span></div>");
+    $('.rui_checkbox_label').append("<div class='before'></div><div class='after'><span class='ruicon-check_1'></span></div>");
     $('.rui_tab_1 a, .rui_tab_1 button, .rui_tab_2 a, .rui_tab_2 button').append("<span class='underbar'></span>");
   }
 
