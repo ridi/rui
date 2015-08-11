@@ -5,7 +5,8 @@
   <meta charset="utf-8"/>
   <title>RIDI UI</title>
   <link rel="stylesheet" type="text/css" media="screen" href="css/page.css"/>
-  <link rel="stylesheet" type="text/css" media="screen" href="css/rui.css?445"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/navigation.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/rui.css"/>
   <!--[if lt IE 9]>
     <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -24,6 +25,19 @@
 <!--[if (gt IE 9)|!(IE)]><!-->
 <body id="browser_modern">
 <!--<![endif]-->
+  <div class="header_wrapper">
+    <h1 class="header_title"><a href="http://ridibooks.com">RIDIBOOKS</a></h1>
+    <ul class="navigation_wrapper">
+      <li><a href="http://static.ridibooks.com/rui/">RUI ▸</a></li>
+      <li><span class="submenu_toggle_button">IconFont ▾</span>
+        <ul class="submenu">
+          <li><a href="http://static.ridibooks.com/books/icon/ridi-icon.html">서점 IconFont</a></li>
+          <li><a href="http://static.ridibooks.com/rui/icon/ruicon.html">RUI IconFont</a></li>
+        </ul>
+      </li>
+      <li><a href="http://static.ridibooks.com/rui/colorChips.html">ColorChips ▸</a></li>
+    </ul>
+  </div>
   <div id="ridi_books">
     <div id="books_contents">
       <div id="contents_page">
@@ -202,38 +216,6 @@
                     <li>
                       <button type="button" class="option js_select_option" value="옵션옵션옵션옵션4">
                         옵션옵션옵션옵션4<span class="ruicon-check_1"></span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="test_li">
-                <!-- 원형 아이콘이 있는 셀렉트박스 -->
-                <div class="rui_select_3 js_select_wrapper">
-                  <input type="hidden" class="js_selected_value" value="">
-                  <button type="button" class="select_button js_select_button">
-                    <span class="js_selected_text selected_text">2015년</span>
-                    <span class="ruicon-arrow_11_down"></span>
-                  </button>
-                  <ul class="options js_select_options">
-                    <li>
-                      <button type="button" class="option js_select_option selected" value="옵션1">
-                        2010년<span class="ruicon-check_1"></span>
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button" class="option js_select_option" value="옵션옵션2">
-                        2011년<span class="ruicon-check_1"></span>
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button" class="option js_select_option" value="옵션옵션옵션3">
-                        2012년<span class="ruicon-check_1"></span>
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button" class="option js_select_option" value="옵션옵션옵션옵션4">
-                        2013년<span class="ruicon-check_1"></span>
                       </button>
                     </li>
                   </ul>
@@ -559,28 +541,24 @@
             <h2>제목 스타일 rui_title_3</h2>
             <ul class="test_ul">
               <li class="test_li">
-                <h3 class="rui_title_3">
-                  <span class="parent_title">
+                <div class="rui_title_3">
+                  <h3 class="parent_title">
                     <a href="#">
-                      <span class="ruicon-feather"></span>
-                      <span class="parent_text" href="#">카테고리</span>
+                      <span class="ruicon-feather"></span> 카테고리
                     </a>
-                  </span>
-                </h3>
+                  </h3>
+                </div>
               </li>
               <li class="test_li">
-                <h3 class="rui_title_3 has_children">
-                  <span class="parent_title">
+                <div class="rui_title_3 has_children">
+                  <h3 class="parent_title" >
                     <a href="#">
-                      <span class="ruicon-feather"></span>
-                      <span class="parent_text">카테고리</span>
+                      <span class="ruicon-feather"></span> 카테고리
                     </a> 
-                  </span>
-                  <span class="children_title">
-                    <span class="ruicon-arrow_8_right"></span>
-                    <p class="children_text">세부 카테고리</p>
-                  </span>
-                </h3>
+                  </h3>
+                  <span class="ruicon-arrow_8_right"></span>
+                  <p class="children_text">세부 카테고리</p>
+                </div>
               </li>
             </ul>
           </article>
