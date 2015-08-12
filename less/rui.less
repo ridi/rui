@@ -528,7 +528,7 @@
 // ===================================================================== rui_view_type_button
 .rui_view_type_button{
   display: inline-block; cursor: default;
-  .border_radius(3px); .box_shadow(~"0 1px 1px 0 rgba(206,210,214,.3)");
+  .box_shadow(~"0 1px 1px 0 rgba(206,210,214,.3)");
   li{
     display: inline-block; margin-left: -1px;
     &:first-child{
@@ -545,19 +545,17 @@
       }
     }//&.right_button_wrapper
     .view_type_button{
-      -webkit-appearance: none; -moz-appearance: none; background: @color_slategray_6; padding: 0;
-      width: 26px; height: 26px; text-align: center; font-size: 20px; color: @color_slategray_4; line-height: 0;
-      position: relative; border: 1px solid @color_slategray_4; .transition(~"background .2s, color .2s");
-      .ruicon-view_list, .ruicon-view_grid{ vertical-align: -20%; }
+      -webkit-appearance: none; -moz-appearance: none; background: white; padding: 0;
+      width: 30px; height: 30px; text-align: center; font-size: 20px; color: @color_slategray_4; line-height: 30px;
+      border: 1px solid @color_slategray_4; .transition(~"color .2s");
+      .ruicon-view_list, .ruicon-view_grid{ vertical-align: -10%; }
       &:hover{
         color: @color_slategray_5;
       }
       &.active{
-        background: white; color: @color_slategray_5;
+        color: @color_dodgerblue_1;
       }
-      &:focus{
-        
-      }
+      &:focus{}
     }//.view_type_button
   }//li
 }//.rui_view_type_button
