@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import "varsAndMixins.less";
-@import "icon/css/ruicon.less";
+@import "../icon/css/ruicon.less";
 
 [class^="rui_"], [class*=" rui_"] {
   &, * {
@@ -18,7 +18,7 @@
 .rui_button(){
   -webkit-appearance: none; -moz-appearance: none; -webkit-tap-highlight-color: rgba(0,0,0,0);
   .box_sizing(~"border-box"); .box_shadow(~"none"); .border_radius(4px);
-  border: none; -webkit-tap-highlight-color: rgba(0,0,0,0); font-weight: bold;
+  border: none; font-weight: bold;
   display: inline-block; text-align: center; cursor: pointer; line-height: 1em;
   .transition(~"background .2s");
   &:disabled, &.disabled{
@@ -287,7 +287,7 @@
   }//&:befor
   &:after{
     @checkbox_size: 18px;
-    content: '\f112'; font-family: 'ruicon'; color: white; font-size: 12px; font-weight: 400;
+    content: '\f112'; font-family: "ruicon"; color: white; font-size: 12px; font-weight: 400;
     text-align: center;
     display: none; width: @checkbox_size; height: @checkbox_size; .box_sizing(~"border-box");
     position: absolute; left: 0; top: 50%; margin-top: -@checkbox_size / 2 - 1px;
@@ -788,7 +788,7 @@
     font-size: 13px; color: @color_slategray_1; line-height: 1.5em; cursor: default;
     a{
       margin-top: 5px; font-weight: bold;
-      display: inline-block; padding: 5px 0; position: relative; padding-right: 15px;
+      display: inline-block; padding: 5px 15px 5px 0; position: relative;
       font-size: 13px; color: @color_slategray_1; .transition(~"color .2s");
       .ruicon-arrow_9_right{
         display: block; position: absolute; right: 0; top: 50%; margin-top: -.5em;
@@ -815,7 +815,7 @@
       color: #c5c5c5; font-size: 20px; vertical-align: -12%; padding-right: 5px;
     }
     .num{
-      display: inlnie-block; color: @color_slategray_5; font-weight: normal;
+      display: inline-block; color: @color_slategray_5; font-weight: normal;
     }
   }//.title_text
   .more_button_wrapper{
@@ -830,7 +830,7 @@
       .title{}//.title
       .ruicon-arrow_9_right{
         display: block; position: absolute; right: 15px; top: 50%; margin-top: -.5em;
-        display: inline-block; font-size: 13px; color: white; font-weight: normal;
+        font-size: 13px; color: white; font-weight: normal;
         .transition(~"right .2s");
       }//.ruicon-arrow_9_right  
       
@@ -867,7 +867,7 @@
       color: #c5c5c5; font-size: 20px; vertical-align: -12%; padding-right: 5px;
     }
     .num{
-      display: inlnie-block; color: @color_slategray_5; font-weight: normal; padding-right: 5px;
+      display: inline-block; color: @color_slategray_5; font-weight: normal; padding-right: 5px;
     }
   }//.title_text
 }//.rui_title_2
