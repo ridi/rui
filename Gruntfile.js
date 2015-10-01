@@ -14,7 +14,7 @@ module.exports = function (grunt) {
             expand: true,
             flatten: true,
             cwd: 'less',
-            src: ['rui.less', 'page.less', 'navigation.less'],
+            src: ['rui.less', 'page.less', 'navigation.less', 'rui.e.less'],
             dest: 'css/',
             ext: '.css',
             extDot: 'last'
