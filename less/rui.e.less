@@ -616,14 +616,14 @@
 
 // ===================================================================== tab_full : 주로 Mobile 용
 .rui_tab_full{
-  border-bottom: 1px solid @color_slategray_4; display: table; table-layout: fixed; width: 100%; cursor: default;
+  border-bottom: 1px solid @color_grayc; display: table; table-layout: fixed; width: 100%; cursor: default;
   .tab_list{
     display: table-cell;
     a, button{
-      display: block; position: relative; padding: 15px 0; color: @color_slategray_5;
-      font-size: 14px; font-weight: bold; text-align: center;
+      display: block; position: relative; padding: 15px 0; color: black;
+      font-size: 14px; font-weight: normal; text-align: center;
       .num{
-        font-weight: normal; color: @color_slategray_9;
+        font-weight: normal; color: @color_gray6;
       }
       &:after{
         display: block; content: '';
@@ -631,21 +631,21 @@
         position: absolute; left: 0; bottom: -1px;
       }//&:after
       &:hover{
-        font-weight: bold; color: @color_slategray_1;
+        color: black;
         .num{
-          color: @color_slategray_1;
+          color: @color_gray6;
         }
         &:after{
-          height: 4px; background: @color_slategray_4;
+          height: 4px; background: @color_grayc;
         }
       }//&:hover
       &.active{
-        font-weight: bold; color: @color_slategray_3;
+        font-weight: bold; color: black;
         .num{
-          color: @color_slategray_3;
+          color: @color_gray6;
         }
         &:after{
-          height: 4px; background: @color_dodgerblue_1;
+          height: 4px; background: black;
         }
       }//&.active
     }//a
