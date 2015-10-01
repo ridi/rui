@@ -374,7 +374,7 @@
     border-color: @color_slategray_5;
   }
   &:focus{
-    border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
+    border-color: @color_gray6; .box_shadow(~"0 0 4px 0 rgba(0, 0, 0, .1)");
   }
   &:disabled{
     border-color: @color_slategray_4; background: @color_slategray_6; color: @color_slategray_4;
@@ -392,7 +392,7 @@
     border-color: @color_slategray_5;
   }
   &:focus{
-    border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
+    border-color: @color_gray6; .box_shadow(~"0 0 4px 0 rgba(0, 0, 0, .1)");
   }
   &:disabled{
     border-color: @color_slategray_4; background: @color_slategray_6; color: @color_slategray_4;
@@ -407,24 +407,26 @@
     display: inline-block;
     a{
       display: inline-block; background: white;
-      border: 1px solid @color_slategray_4;
-      font-size: 13px; font-weight: bold; color: @color_slategray_5;
+      border: 1px solid @color_grayc;
+      font-size: 13px; font-weight: bold; color: black;
       min-width: 2em; height: 30px; padding: 0 10px; line-height: 30px;
-      .border_radius(3px); .box_shadow(~"0 1px 1px 0 rgba(206, 210, 214, .3)");
-      .ruicon-arrow_8_left, .ruicon-arrow_8_right{ vertical-align: -10%; }
+      .border_radius(3px);
+      .ruicon-arrow_8_left, .ruicon-arrow_8_right{
+        vertical-align: -10%;
+      }
       &:hover{
-        background: @color_slategray_6;
+        background: @color_slategray_8;
       }
     }//a
 
     &.first_page_button, &.last_page_button{
       .ruicon-dotdotdot{
         display: inline-block; margin: 0 4px;
-        color: @color_slategray_4;
+        color: black;
       }
     }//&.first_page_button, &.last_page_button
     &.page_buttons{
-      margin: 0 5px; .box_shadow(~"0 1px 1px 0 rgba(206, 210, 214, .3)"); .border_radius(3px);
+      margin: 0 5px; .border_radius(3px);
       a{
         margin-left: -1px; position: relative; .border_radius(0); .box_shadow(~"none");
         &.first_button{
@@ -435,7 +437,7 @@
         }//&.last-child
         &.page_this{
           z-index: 1;
-          color: white; background: @color_dodgerblue_1; border-color: @color_dodgerblue_7;
+          color: white; background: black; border-color: black;
         }
       }//a
     }//&.page_buttons
