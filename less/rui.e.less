@@ -40,38 +40,32 @@
   font-size: 16px; padding: 16px 34px;
 }
 
-.rui_button_blue(){
-  color: white; background: @color_dodgerblue_1; border: 1px solid @color_dodgerblue_3;
-  @red: red(@color_dodgerblue_1);
-  @green: green(@color_dodgerblue_1);
-  @blue: blue(@color_dodgerblue_1);
+.rui_button_eink(){
+  color: white; background: black; border: 1px solid black;
   @opacity: .3;
-  .box_shadow(~"0 1px 1px 0 rgba(@{red}, @{green}, @{blue}, @{opacity})");
+  .box_shadow(~"0 1px 1px 0 rgba(0, 0, 0, @{opacity})");
   &:link, &:visited, &:hover, &:focus{
     color: white;
   }
   &:hover, &:focus{
-    background: @color_dodgerblue_3;
+    background: black;
   }//&:hover, &:focus
   &:disabled, &.disabled{
     &:hover, &:focus{
-      background: @color_dodgerblue_1;
+      background: black;
     }//&:hover, &:focus
   }
 }
 
-.rui_button_blue_line(){
-  color: @color_dodgerblue_1; background: white; border: 1px solid @color_dodgerblue_3;
-  @red: red(@color_dodgerblue_1);
-  @green: green(@color_dodgerblue_1);
-  @blue: blue(@color_dodgerblue_1);
+.rui_button_eink_line(){
+  color: black; background: white; border: 1px solid @color_grayc;
   @opacity: .3;
-  .box_shadow(~"0 1px 1px 0 rgba(@{red}, @{green}, @{blue}, @{opacity})");
+  .box_shadow(~"0 1px 1px 0 rgba(0, 0, 0, @{opacity})");
   &:link, &:visited, &:hover, &:focus{
-    color: @color_dodgerblue_1;
+    color: black;
   }
   &:hover, &:focus{
-    background: @color_lightsteelblue_3;
+    background: white;
   }//&:hover, &:focus
   &:disabled, &.disabled{
     &:hover, &:focus{
@@ -80,124 +74,88 @@
   }
 }
 
-.rui_button_gray(){
-  color: white; background: @color_bluegray_2; border: 1px solid @color_bluegray_16;
-  @red: red(@color_bluegray_2);
-  @green: green(@color_bluegray_2);
-  @blue: blue(@color_bluegray_2);
+.rui_button_eink_gray(){
+  color: white; background: @color_gray6; border: 1px solid @color_gray6;
+  @red: red(@color_dodgerblue_1);
+  @green: green(@color_dodgerblue_1);
+  @blue: blue(@color_dodgerblue_1);
   @opacity: .3;
-  .box_shadow(~"0 1px 1px 0 rgba(@{red}, @{green}, @{blue}, @{opacity})");
+  .box_shadow(~"0 1px 1px 0 rgba(0, 0, 0, @{opacity})");
   &:link, &:visited, &:hover, &:focus{
     color: white;
   }
   &:hover, &:focus{
-    background: @color_bluegray_16;
+    background: @color_gray6;
   }//&:hover, &:focus
   &:disabled, &.disabled{
     &:hover, &:focus{
-      background: @color_bluegray_2;
+      background: @color_gray6;
     }//&:hover, &:focus
   }
 }
 
-.rui_button_white(){
-  color: @color_slategray_5; background: white; border: 1px solid @color_slategray_4;
-  @red: red(@color_slategray_4);
-  @green: green(@color_slategray_4);
-  @blue: blue(@color_slategray_4);
-  @opacity: .3;
-  .box_shadow(~"0 1px 1px 0 rgba(@{red}, @{green}, @{blue}, @{opacity})");
-  &:link, &:visited, &:hover, &:focus{
-    color: @color_slategray_5;
-  }
-  &:hover, &:focus{
-    background: @color_slategray_6;
-  }//&:hover, &:focus
-  &:disabled, .disabled{
-    &:hover, &:focus{
-      background: white;
-    }//&:hover, &:focus
-  }
-}
+.rui_button_eink_21{
+  .rui_button(); .rui_button_eink(); .rui_button_size_21();
+}//.rui_button_eink_21
+.rui_button_eink_25{
+  .rui_button(); .rui_button_eink(); .rui_button_size_25();
+}//.rui_button_eink_25
+.rui_button_eink_30{
+  .rui_button(); .rui_button_eink(); .rui_button_size_30();
+}//.rui_button_eink_30
+.rui_button_eink_40{
+  .rui_button(); .rui_button_eink(); .rui_button_size_40();
+}//.rui_button_eink_40
+.rui_button_eink_50{
+  .rui_button(); .rui_button_eink(); .rui_button_size_50();
+}//.rui_button_eink_50
 
-.rui_button_blue_21{
-  .rui_button(); .rui_button_blue(); .rui_button_size_21();
-}//.rui_button_blue_21
-.rui_button_blue_25{
-  .rui_button(); .rui_button_blue(); .rui_button_size_25();
-}//.rui_button_blue_25
-.rui_button_blue_30{
-  .rui_button(); .rui_button_blue(); .rui_button_size_30();
-}//.rui_button_blue_30
-.rui_button_blue_40{
-  .rui_button(); .rui_button_blue(); .rui_button_size_40();
-}//.rui_button_blue_40
-.rui_button_blue_50{
-  .rui_button(); .rui_button_blue(); .rui_button_size_50();
-}//.rui_button_blue_50
+.rui_button_eink_line_21{
+  .rui_button(); .rui_button_eink_line(); .rui_button_size_21();
+}//.rui_button_eink_line_21
+.rui_button_eink_line_25{
+  .rui_button(); .rui_button_eink_line(); .rui_button_size_25();
+}//.rui_button_eink_line_25
+.rui_button_eink_line_30{
+  .rui_button(); .rui_button_eink_line(); .rui_button_size_30();
+}//.rui_button_eink_line_30
+.rui_button_eink_line_40{
+  .rui_button(); .rui_button_eink_line(); .rui_button_size_40();
+}//.rui_button_eink_line_40
+.rui_button_eink_line_50{
+  .rui_button(); .rui_button_eink_line(); .rui_button_size_50();
+}//.rui_button_eink_line_50
 
-.rui_button_blue_line_21{
-  .rui_button(); .rui_button_blue_line(); .rui_button_size_21();
-}//.rui_button_blue_line_21
-.rui_button_blue_line_25{
-  .rui_button(); .rui_button_blue_line(); .rui_button_size_25();
-}//.rui_button_blue_line_25
-.rui_button_blue_line_30{
-  .rui_button(); .rui_button_blue_line(); .rui_button_size_30();
-}//.rui_button_blue_line_30
-.rui_button_blue_line_40{
-  .rui_button(); .rui_button_blue_line(); .rui_button_size_40();
-}//.rui_button_blue_line_40
-.rui_button_blue_line_50{
-  .rui_button(); .rui_button_blue_line(); .rui_button_size_50();
-}//.rui_button_blue_line_50
-
-.rui_button_gray_21{
-  .rui_button(); .rui_button_gray(); .rui_button_size_21();
-}//.rui_button_gray_21
-.rui_button_gray_25{
-  .rui_button(); .rui_button_gray(); .rui_button_size_25();
-}//.rui_button_gray_25
-.rui_button_gray_30{
-  .rui_button(); .rui_button_gray(); .rui_button_size_30();
-}//.rui_button_gray_30
-.rui_button_gray_40{
-  .rui_button(); .rui_button_gray(); .rui_button_size_40();
-}//.rui_button_gray_40
-.rui_button_gray_50{
-  .rui_button(); .rui_button_gray(); .rui_button_size_50();
-}//.rui_button_gray_50
-
-.rui_button_white_21{
-  .rui_button(); .rui_button_white(); .rui_button_size_21();
-}//.rui_button_white_21
-.rui_button_white_25{
-  .rui_button(); .rui_button_white(); .rui_button_size_25();
-}//.rui_button_white_25
-.rui_button_white_30{
-  .rui_button(); .rui_button_white(); .rui_button_size_30();
-}//.rui_button_white_30
-.rui_button_white_40{
-  .rui_button(); .rui_button_white(); .rui_button_size_40();
-}//.rui_button_white_40
-.rui_button_white_50{
-  .rui_button(); .rui_button_white(); .rui_button_size_50();
-}//.rui_button_white_50
+.rui_button_eink_gray_21{
+  .rui_button(); .rui_button_eink_gray(); .rui_button_size_21();
+}//.rui_button_eink_gray_21
+.rui_button_eink_gray_25{
+  .rui_button(); .rui_button_eink_gray(); .rui_button_size_25();
+}//.rui_button_eink_gray_25
+.rui_button_eink_gray_30{
+  .rui_button(); .rui_button_eink_gray(); .rui_button_size_30();
+}//.rui_button_eink_gray_30
+.rui_button_eink_gray_40{
+  .rui_button(); .rui_button_eink_gray(); .rui_button_size_40();
+}//.rui_button_eink_gray_40
+.rui_button_eink_gray_50{
+  .rui_button(); .rui_button_eink_gray(); .rui_button_size_50();
+}//.rui_button_eink_gray_50
 
 // ===================================================================== radio
 .rui_radio_input{
   -webkit-appearance: none; -moz-appearance: none; appearance: none;
   position: absolute; width: 0; height: 0; left: -9999px;
   &:hover + label:before{
-    border-color: @color_slategray_5;
+    border-color: @color_grayc;
   }
   &:focus + label:before{
-    border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
+    border-color: @color_grayc; .box_shadow(~"0 0 4px 0 rgba(0, 0, 0, .1)");
   }
   &:checked + label{
     color: @color_slategray_2;
     &:before{
-      border-color: @color_dodgerblue_7; background: @color_dodgerblue_1;
+      border-color: @color_grayc; background: black;
     }
     &:after{
       .box_shadow(~"0 2px 2px 0 rgba(0,0,0,.15)");
@@ -238,7 +196,7 @@
   }
   &:focus{
     &:before{
-      border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
+      border-color: @color_slategray_5; .box_shadow(~"0 0 4px 0 rgba(0, 0, 0, .1)");
     }
   }//&:focus
 }//.rui_radio_label
@@ -248,15 +206,15 @@
   -webkit-appearance: none; -moz-appearance: none; appearance: none;
   position: absolute; width: 0; height: 0; left: -9999px;
   &:hover + label:before{
-    border-color: @color_slategray_5;
+    border-color: @color_grayc;
   }
   &:focus + label:before{
-    border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
+    border-color: @color_grayc; .box_shadow(~"0 0 4px 0 rgba(0, 0, 0, .1)");
   }
   &:checked + label{
     color: @color_slategray_2;
     &:before{
-      border-color: @color_dodgerblue_7; background: @color_dodgerblue_1;
+      border-color: @color_grayc; background: black;
     }
     &:after{
       display: block;
@@ -293,7 +251,7 @@
   }
   &:focus{
     &:before{
-      border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
+      border-color: @color_slategray_5; .box_shadow(~"0 0 4px 0 rgba(0, 0, 0, .1)");
     }
   }//&:focus
 }//.rui_checkbox_label
@@ -329,9 +287,9 @@
         position: absolute; right: 10px; top: 50%; margin-top: -.6em;
       }
       &.selected{
-        background: @color_lightsteelblue_1; color: @color_slategray_2;
+        background: @color_slategray_8; color: black;
         position: relative;
-        .ruicon-check_1{ display: block; color: @color_dodgerblue_1; }
+        .ruicon-check_1{ display: block; color: black; }
       }
     }//li
   }//ul
@@ -386,10 +344,10 @@
         position: absolute; right: 10px; top: 50%; margin-top: -.6em;
       }
       &.selected{
-        background: @color_lightsteelblue_1; color: @color_slategray_2;
+        background: @color_slategray_8; color: black;
         position: relative;
-        .ruicon-check_1{ display: block; color: @color_dodgerblue_1; }
-        &:hover{ background: @color_lightsteelblue_1; }
+        .ruicon-check_1{ display: block; color: black; }
+        &:hover{ background: @color_slategray_8; }
       }
       &:hover{ background: @color_slategray_6; }
     }//.option
@@ -397,7 +355,7 @@
   &.select_opened{
     .options{ max-height: none; .opacity(1); }
     .select_button{
-      border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
+      border-color: @color_gray6; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
       .ruicon-arrow_1_down{ .rotate(180); }
     }
   }
