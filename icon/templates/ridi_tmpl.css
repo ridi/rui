@@ -1,17 +1,9 @@
-<% if (fontfaceStyles) { %>
-<% if (fontSrc1 && embed.length) { %>
-@font-face {
+<% if (fontfaceStyles) { %>@font-face {
   font-family:"<%= fontBaseName %>";
-  src:<%= fontSrc1 %>;
   font-weight:normal;
   font-style:normal;
-}
-<% } %>@font-face {
-  font-family:"<%= fontBaseName %>";
-  src:<%= fontRawSrcs[1][1] %>,
-      <%= fontRawSrcs[1][2] %>;
-  font-weight:normal;
-  font-style:normal;
+  <% if (fontSrc1) { %>src: <%= fontSrc1 %>;<% }%>
+  src: <%= fontSrc2 %>;
 }
 <% } %>
 <% if (baseStyles) { %>.<%= baseClass %>, [class^="ruicon-"], [class*=" ruicon-"]<% if (addLigatures) { %>,
