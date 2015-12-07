@@ -52,11 +52,11 @@
     color: white;
   }
   &:hover, &:focus{
-    background: @color_dodgerblue_3; 
+    background: @color_dodgerblue_3;
   }
   &:disabled, &.disabled{
     &:hover, &:focus{
-      background: @color_dodgerblue_1; 
+      background: @color_dodgerblue_1;
     }
   }
 }
@@ -76,7 +76,7 @@
   }
   &:disabled, &.disabled{
     &:hover, &:focus{
-      background: white; 
+      background: white;
     }
   }
 }
@@ -96,7 +96,7 @@
   }
   &:disabled, &.disabled{
     &:hover, &:focus{
-      background: @color_bluegray_2; 
+      background: @color_bluegray_2;
     }
   }
 }
@@ -116,7 +116,7 @@
   }
   &:disabled, .disabled{
     &:hover, &:focus{
-      background: white; 
+      background: white;
     }
   }
 }
@@ -324,9 +324,10 @@
     .ruicon-check_1{ display: none; }
   }
   .options{
-    max-height: 0; .opacity(0); .transition(~"opacity .2s");
-    position: absolute; top: 39px; background: white; z-index: 2;
-    border: 2px solid @color_slategray_5; .border_radius(3px); overflow: hidden;
+    position: absolute; top: 39px; max-height: 0;
+    background: white; border: 2px solid @color_slategray_5;
+    overflow: hidden; z-index: 50;
+    .border_radius(3px); .opacity(0); .transition(~"opacity .2s");
     .option{
       display: block; padding: 14px 20px 14px 10px; font-size: 13px; text-align: left;
       min-width: 150px; cursor: pointer; color: @color_slategray_5; font-weight: bold;
@@ -337,7 +338,7 @@
       &.selected{
         background: @color_lightsteelblue_1; color: @color_slategray_2;
         position: relative;
-       .ruicon-check_1{ display: block; color: @color_dodgerblue_1; } 
+       .ruicon-check_1{ display: block; color: @color_dodgerblue_1; }
       }
     }
   }
@@ -364,7 +365,7 @@
     .box_sizing(~"border-box"); .box_shadow(~"none");
   }
   .select_button{
-    .border_radius(3px); .transition(~"border-color .2s, box-shadow .2s"); 
+    .border_radius(3px); .transition(~"border-color .2s, box-shadow .2s");
     display: block; position: relative; width: 100%; padding: 8px 22px 8px 8px;
     border: 1px solid #ced2d6; background: #fff; line-height: 0;
     .selected_text{
@@ -381,9 +382,11 @@
     &:hover{ border-color: @color_slategray_5; }
   }
   .options{
-    max-height: 0; .opacity(0); .transition(~"opacity .2s"); .box_sizing(~"border-box");
-    position: absolute; top: 38px; background: white; z-index: 2; width: 100%; cursor: pointer;
-    border: 1px solid @color_slategray_9; .border_radius(3px); overflow: hidden;
+    position: absolute; top: 38px; width: 100%; max-height: 0;
+    background: white; cursor: pointer; border: 1px solid @color_slategray_9;
+    overflow: hidden; z-index: 50;
+    .opacity(0); .transition(~"opacity .2s"); .box_sizing(~"border-box");
+    .border_radius(3px);
     .option{
       display: block; padding: 10px 22px 10px 10px; width: 100%;
       font-size: 13px; text-align: left; color: @color_slategray_5; font-weight: bold;
@@ -426,7 +429,7 @@
   }
   &:disabled{
     border-color: @color_slategray_4; background: @color_slategray_6; color: @color_slategray_4;
-  } 
+  }
 }
 
 // ===================================================================== textarea
@@ -445,7 +448,7 @@
   &:disabled{
     border-color: @color_slategray_4; background: @color_slategray_6; color: @color_slategray_4;
     resize: none; font-weight: bold;
-  } 
+  }
 }
 
 // ===================================================================== pagenation
@@ -465,12 +468,12 @@
         background: @color_slategray_6;
       }
     }
-    
+
     &.first_page_button, &.last_page_button{
-      .ruicon-dotdotdot{ 
+      .ruicon-dotdotdot{
         display: inline-block; margin: 0 4px;
-        color: @color_slategray_4; 
-      }  
+        color: @color_slategray_4;
+      }
     }
     &.page_buttons{
       margin: 0 5px; .box_shadow(~"0 1px 1px 0 rgba(206, 210, 214, .3)"); .border_radius(3px);
@@ -717,8 +720,8 @@
         color: @color_slategray_2;
       }
     }
-    &:first-child{ 
-      border-left: none; 
+    &:first-child{
+      border-left: none;
       a{
         margin-left: -@order_padding;
       }
@@ -831,7 +834,7 @@
         font-size: 13px; color: white; font-weight: normal;
         .transition(~"right .2s");
       }
-      
+
       &:hover{
         background: @color_gray6;
         .ruicon-arrow_9_right{
@@ -923,7 +926,7 @@
   }
   .search_input{
     background: none; border: none; vertical-align: top;
-    width: 100%; font-size: 13px; color: @color_slategray_2; 
+    width: 100%; font-size: 13px; color: @color_slategray_2;
     .placeholder_style(@color_slategray_5, ~"normal"); .box_sizing(~"border-box");
     &:active, &:focus{
       .placeholder_style(@color_slategray_4, ~"normal");
@@ -974,7 +977,7 @@
     text-align: center; padding: 20px 10px;
     background: @color_beige_1; border: 1px solid @color_beige_2; .border_radius(3px);
     .alert_title{
-      font-size: 17px; font-weight: bold; color: @color_brown_1; 
+      font-size: 17px; font-weight: bold; color: @color_brown_1;
       .ruicon-exclamation_2{
         font-size: 25px; vertical-align: -14%;
       }
@@ -1006,7 +1009,7 @@
     font-size: 13px; color: @color_gray3; line-height: 1.8em;
   }
   p {
-    padding: 10px 0; 
+    padding: 10px 0;
   }
   a {
     text-decoration: underline; color: @color_dodgerblue_3;
@@ -1037,7 +1040,7 @@
     &:after {
       content: ''; display: block;
       width: 3px; height: 3px; background: @color_gray3;
-      position: absolute; left: -8px; top: 9px; 
+      position: absolute; left: -8px; top: 9px;
     }
   }
   dl dt { font-weight: bold; }
