@@ -684,19 +684,14 @@
   .order_list{
     display: inline-block;
     .ruicon-dot_1{
-      padding: 0 5px; font-size: 16px; vertical-align: -16%; color: @color_slategray_10;
+      padding: 0 5px; font-size: 16px; vertical-align: -10%; color: black;
     }
     a{
-      display: inline-block; font-size: 12px; font-weight: bold; color: @color_slategray_5;
-      &:hover{
-        color: @color_slategray_1;
-      }
-      &.active{
-        color: @color_slategray_2;
-      }
+      display: inline-block; font-size: 14px; color: black;
+      &.active{ font-weight: bold; }
     }//a
-    &:first-child .ruicon-dot_1{
-      display: none;
+    &:first-child {
+      .ruicon-dot_1{ display: none; }
     }//&:first-child
   }//li
 }//.rui_order
