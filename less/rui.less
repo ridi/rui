@@ -17,22 +17,38 @@
 // ===================================================================== button
 .rui_button() {
   -webkit-appearance: none; -moz-appearance: none; -webkit-tap-highlight-color: rgba(0,0,0,0);
-  .box_sizing(~"border-box"); .box_shadow(~"none"); .border_radius(4px);
+  .box_sizing(~"border-box"); .box_shadow(~"none"); .border_radius(4px); outline: none;
   border: none; font-weight: bold;
   display: inline-block; text-align: center; cursor: pointer; line-height: 1em;
-  .transition(~"background .2s");
+  .transition(~"background .2s, color .2s");
+  &.spinner {
+    position: relative;
+    &:after {
+      content: ''; display: block; width: 100%; height: 100%;
+      position: absolute; left: 0; top: 0;
+    }
+  }
   &:disabled, &.disabled {
     .opacity(.5); cursor: default;
   }
 }
 .rui_button_size_21() {
   font-size: 11px; padding: 4px 10px;
+  &.spinner:after {
+    background-size: 10px;
+  }
 }
 .rui_button_size_25() {
   font-size: 11px; padding: 6px 14px;
+  &.spinner:after {
+    background-size: 15px;
+  }
 }
 .rui_button_size_30() {
   font-size: 12px; padding: 8px 18px;
+  &.spinner:after {
+    background-size: 17px;
+  }
 }
 .rui_button_size_40() {
   font-size: 13px; padding: 12px 26px;
@@ -54,9 +70,24 @@
   &:hover, &:focus {
     background: @color_dodgerblue_3;
   }
+  &.spinner {
+    color: @color_dodgerblue_1;
+    &:hover, &:focus {
+      color: @color_dodgerblue_3;
+    }
+    &:after {
+      background: url(../images/spinner/blue.gif) no-repeat center;
+      background-size: 20px;
+    }
+  }
   &:disabled, &.disabled {
     &:hover, &:focus {
       background: @color_dodgerblue_1;
+    }
+    &.spinner {
+      &:hover, &:focus {
+        color: @color_dodgerblue_1;
+      }
     }
   }
 }
@@ -74,9 +105,24 @@
   &:hover, &:focus {
     background: @color_lightsteelblue_3;
   }
+  &.spinner {
+    color: white;
+    &:hover, &:focus {
+      color: @color_lightsteelblue_3;
+    }
+    &:after {
+      background: url(../images/spinner/blue_line.gif) no-repeat center;
+      background-size: 20px;
+    }
+  }
   &:disabled, &.disabled {
     &:hover, &:focus {
       background: white;
+    }
+    &.spinner {
+      &:hover, &:focus {
+        color: white;
+      }
     }
   }
 }
@@ -94,9 +140,24 @@
   &:hover, &:focus {
     background: @color_bluegray_16;
   }
+  &.spinner {
+    color: @color_bluegray_2;
+    &:hover, &:focus {
+      color: @color_bluegray_16;
+    }
+    &:after {
+      background: url(../images/spinner/gray.gif) no-repeat center;
+      background-size: 20px;
+    }
+  }
   &:disabled, &.disabled {
     &:hover, &:focus {
       background: @color_bluegray_2;
+    }
+    &.spinner {
+      &:hover, &:focus {
+        color: @color_bluegray_2;
+      }
     }
   }
 }
@@ -114,9 +175,24 @@
   &:hover, &:focus {
     background: @color_slategray_6;
   }
+  &.spinner {
+    color: white;
+    &:hover, &:focus {
+      color: @color_slategray_6;
+    }
+    &:after {
+      background: url(../images/spinner/gray_line.gif) no-repeat center;
+      background-size: 20px;
+    }
+  }
   &:disabled, .disabled {
     &:hover, &:focus {
       background: white;
+    }
+    &.spinner {
+      &:hover, &:focus {
+        color: white;
+      }
     }
   }
 }
