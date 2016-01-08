@@ -20,9 +20,6 @@ body {
 .navigation_wrapper {
   margin: 0; display: inline-block; vertical-align: top;
 }
-.navigation_wrapper > li:first-child a {
-  padding: 0 20px 0 0;
-}
 .navigation_wrapper li {
   margin: 0; display: inline-block; position: relative;
 }
@@ -45,7 +42,7 @@ body {
   transition: height .2s;
 }
 .navigation_wrapper li .submenu li a {
-  height: 36px; line-height: 36px;
+  height: 36px; line-height: 36px; white-space: nowrap;
   -webkit-transition: background .2s, color .2s;
   transition: background .2s, color .2s;
 }
