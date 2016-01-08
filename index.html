@@ -7,15 +7,15 @@
   <link rel="stylesheet" type="text/css" media="screen" href="http://static.ridibooks.com/books/css/common/reset.css"/>
   <link rel="stylesheet" type="text/css" media="screen" href="css/page.css"/>
   <link rel="stylesheet" type="text/css" media="screen" href="css/navigation.css"/>
-  <link rel="stylesheet" type="text/css" media="screen" href="css/rui.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/rui.css?20151001"/>
+  <script src="//cdn.jsdelivr.net/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/rui.js"></script>
   <!--[if lt IE 9]>
     <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
   <![endif]-->
-  <script src="//cdn.jsdelivr.net/jquery/1.11.3/jquery.min.js"></script>
-  <!--[if lte IE 8]>  
-    <script src="js/rui_ie8.js"></script>  
+  <!--[if lte IE 8]>
+    <script src="js/rui_ie8.js"></script>
   <![endif]-->
-  <script src="js/rui.js"></script>
 </head>
 <!--[if lte IE 8]>
 <body id="browser_ie8">
@@ -55,6 +55,7 @@
                 <button type="button" class="rui_button_blue_30">구매하기</button>
                 <button type="button" class="rui_button_blue_40">구매하기</button>
                 <button type="button" class="rui_button_blue_50">구매하기</button>
+                <button type="button" class="rui_button_blue_50 spinner">구매하기</button>
                 <button type="button" class="rui_button_blue_50 disabled">구매하기</button>
               </li>
               <li class="test_li">
@@ -232,7 +233,7 @@
                 <input type="text" class="rui_text_input" placeholder="Text input">
               </li>
               <li class="test_li">
-                <input type="text" class="rui_text_input" readonly="readonly" value="읽기전용 Read-only">
+                <input type="text" class="rui_text_input" readonly="readonly" placeholder="읽기전용 Read-only" value="읽기전용 Read-only">
               </li>
               <li class="test_li">
                 <input type="text" class="rui_text_input" disabled="disabled" placeholder="비활성화 Disabled">
@@ -245,13 +246,13 @@
             <h2>장문입력 rui_textarea</h2>
             <ul class="test_ul">
               <li class="test_li">
-                <textarea name="text_area" id="text-area" class="rui_textarea" cols="50" rows="4" placeholder="문장입력 Textarea"></textarea>
+                <textarea name="text_area" class="rui_textarea" cols="50" rows="4" placeholder="문장입력 Textarea"></textarea>
               </li>
               <li class="test_li">
-                <textarea name="text_area" id="text-area" class="rui_textarea" cols="50" rows="4" readonly="readonly">읽기전용 Read-only</textarea>
+                <textarea name="text_area" class="rui_textarea" cols="50" rows="4" placeholder="읽기전용 Read-only" readonly="readonly">읽기전용 Read-only</textarea>
               </li>
               <li class="test_li">
-                <textarea name="text_area" id="text-area" class="rui_textarea" cols="50" rows="4" disabled="disabled">비활성화 Disabled</textarea>
+                <textarea name="text_area" class="rui_textarea" cols="50" rows="4" placeholder="비활성화 Disabled" disabled="disabled">비활성화 Disabled</textarea>
               </li>
             </ul>
           </article>
@@ -268,7 +269,7 @@
                       <span class="ruicon-dotdotdot"></span>
                     </li>
                     <li class="previous_page_button">
-                      <a href="#"><span class="ruicon-arrow_8_left"></a>
+                      <a href="#"><span class="ruicon-arrow_8_left"></span></a>
                     </li>
                     <li class="page_buttons">
                       <a class="first_button" href="#">6</a>
@@ -297,9 +298,9 @@
               <li class="test_li">
                 <ul class="rui_compact_pagination">
                   <li class="left_button_wrapper">
-                    <button class="compact_button" type="button"><span class="ruicon-arrow_8_left"><span class="hidden">이전</span></button>
+                    <button class="compact_button" type="button"><span class="ruicon-arrow_8_left"><span class="hidden">이전</span></span></button>
                   </li><li class="right_button_wrapper">
-                    <button class="compact_button" type="button"><span class="ruicon-arrow_8_right"><span class="hidden">다음</span></button>
+                    <button class="compact_button" type="button"><span class="ruicon-arrow_8_right"><span class="hidden">다음</span></span></button>
                   </li>
                 </ul>
               </li>
