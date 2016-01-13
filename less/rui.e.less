@@ -65,7 +65,9 @@
     background: black;
   }
   &.spinner {
-    color: black;
+    &, span {
+      color: black!important;
+    }
     &:after {
       background: url(../images/spinner/black.e.gif) no-repeat center;
       background-size: 22px;
@@ -87,7 +89,9 @@
     background: white;
   }
   &.spinner {
-    color: white;
+    &, span {
+      color: white!important;
+    }
     &:after {
       background: url(../images/spinner/gray_line.e.gif) no-repeat center;
       background-size: 22px;
@@ -109,7 +113,9 @@
     background: @color_gray6;
   }
   &.spinner {
-    color: @color_gray6;
+    &, span {
+      color: @color_gray6!important;
+    }
     &:after {
       background: url(../images/spinner/gray.e.gif) no-repeat center;
       background-size: 22px;

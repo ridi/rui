@@ -71,9 +71,13 @@
     background: @color_dodgerblue_3;
   }
   &.spinner {
-    color: @color_dodgerblue_1;
+    &, span {
+      color: @color_dodgerblue_1!important;
+    }
     &:hover, &:focus {
-      color: @color_dodgerblue_3;
+      &, span {
+        color: @color_dodgerblue_3!important;
+      }
     }
     &:after {
       background: url(../images/spinner/blue.gif) no-repeat center;
@@ -86,7 +90,9 @@
     }
     &.spinner {
       &:hover, &:focus {
-        color: @color_dodgerblue_1;
+        &, span {
+          color: @color_dodgerblue_1!important;
+        }
       }
     }
   }
@@ -106,9 +112,13 @@
     background: @color_lightsteelblue_3;
   }
   &.spinner {
-    color: white;
+    &, span {
+      color: white!important;
+    }
     &:hover, &:focus {
-      color: @color_lightsteelblue_3;
+      &, span {
+        color: @color_lightsteelblue_3!important;
+      }
     }
     &:after {
       background: url(../images/spinner/blue_line.gif) no-repeat center;
@@ -141,9 +151,13 @@
     background: @color_bluegray_16;
   }
   &.spinner {
-    color: @color_bluegray_2;
+    &, span {
+      color: @color_bluegray_2!important;
+    }
     &:hover, &:focus {
-      color: @color_bluegray_16;
+      &, span {
+        color: @color_bluegray_16!important;
+      }
     }
     &:after {
       background: url(../images/spinner/gray.gif) no-repeat center;
@@ -156,7 +170,9 @@
     }
     &.spinner {
       &:hover, &:focus {
-        color: @color_bluegray_2;
+        &, span {
+          color: @color_bluegray_2!important;
+        }
       }
     }
   }
@@ -176,9 +192,13 @@
     background: @color_slategray_6;
   }
   &.spinner {
-    color: white;
+    &, span {
+      color: white!important;
+    }
     &:hover, &:focus {
-      color: @color_slategray_6;
+      &, span {
+        color: @color_slategray_6!important;
+      }
     }
     &:after {
       background: url(../images/spinner/gray_line.gif) no-repeat center;
@@ -191,7 +211,9 @@
     }
     &.spinner {
       &:hover, &:focus {
-        color: white;
+        &, span {
+          color: white!important;
+        }
       }
     }
   }
