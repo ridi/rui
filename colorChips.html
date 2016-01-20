@@ -4,21 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta charset="utf-8"/>
   <title>RIDI ColorChips</title>
-  <link rel="stylesheet" type="text/css" media="screen" href="../books/css/page_base.css?150224"/>
-  <link rel="stylesheet" type="text/css" media="screen" href="../books/css/common/nanumgothic.css"/>
-  <link rel="stylesheet" type="text/css" media="screen" href="css/navigation.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/page.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/navigation.css?20160108"/>
   <style>
     #page_colorchips{ padding: 40px 30px; }
     #page_colorchips h1{ font-size: 24px; color: black; font-weight: bold; padding: 5px; font-family: helvetica, arial, sans-serif; }
     #page_colorchips ul{ }
     #page_colorchips ul li{ display: inline-block; width: 150px; margin: 10px 5px;}
     #page_colorchips ul li .chip{ height: 100px; }
-    #page_colorchips ul li button{ 
+    #page_colorchips ul li button{
       -webkit-appearance: none; border: none; width: 100%;
-      text-align: center; background: black; padding: 7px; line-height: 1.5em; color: white; font-size: 13px; 
+      text-align: center; background: black; padding: 7px; line-height: 1.5em; color: white; font-size: 13px;
     }
     #page_colorchips ul li button:hover{
-      
+
     }
     #page_colorchips ul li button:focus{
       background: #333;
@@ -26,33 +25,27 @@
     #page_colorchips ul li button .title{ font-family: helvetica, arial, sans-serif; }
     #page_colorchips ul li button .code{  font-family: helvetica, arial, sans-serif; }
   </style>
-  <!--[if lt IE 9]>
-    <script src="//static.ridibooks.com/books/bower_components/html5shiv/dist/html5shiv.min.js"></script>
-  <![endif]-->
   <script src="//static.ridibooks.com/books/bower_components/jquery/dist/jquery.min.js"></script>
   <script>
     $(function() {
       $('.js_chip_button').click(function() {
         str = $(this).find('.code').text();
         //for IE ONLY!
-        window.clipboardData.setData('Text',str);  
+        window.clipboardData.setData('Text',str);
       });
     });
   </script>
 </head>
-<!--[if lte IE 8]>
-<body id="browser_ie8">
-<![endif]-->
-<!--[if IE 9]>
-<body id="browser_ie9">
-<![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<body id="browser_modern">
-<!--<![endif]-->
+<body>
   <div class="header_wrapper">
     <h1 class="header_title"><a href="http://ridibooks.com">RIDIBOOKS</a></h1>
     <ul class="navigation_wrapper">
-      <li><a href="http://static.ridibooks.com/rui/">RUI ▸</a></li>
+      <li><span class="submenu_toggle_button">RUI ▾</span>
+        <ul class="submenu">
+          <li><a href="http://static.ridibooks.com/rui/index.html">PC, Mobile</a></li>
+          <li><a href="http://static.ridibooks.com/rui/index.e.html">PAPER</a></li>
+        </ul>
+      </li>
       <li><span class="submenu_toggle_button">IconFont ▾</span>
         <ul class="submenu">
           <li><a href="http://static.ridibooks.com/books/icon/ridi-icon.html">서점 IconFont</a></li>
