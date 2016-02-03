@@ -1,5 +1,5 @@
 require(['jquery'], function($) {
-  function ruiSelectBox() {
+  function setRuiSelectBoxEventListener() {
     $('.js_select_button').click(function() {
       var selectWrapper = $(this).parents('.js_select_wrapper').eq(0);
       if (!selectWrapper.hasClass('select_opened')) {
@@ -17,13 +17,13 @@ require(['jquery'], function($) {
     });
   }
 
-  function ruiSearchBoxClear() {
+  function setRuiSearchBoxEventListener() {
     $('.js_search_box_clear_button').click(function() {
       $(this).parents('.js_search_box').eq(0).find('.js_search_input')[0].value = '';
     });
   }
 
-  function ruiSpinner() {
+  function addRuiSpinnerFunctions() {
     $.fn.addRuiSpinner = function() {
       this.each(function() {
         var $this = $(this);
@@ -43,9 +43,9 @@ require(['jquery'], function($) {
   }
 
   $(function() {
-    ruiSelectBox();
-    ruiSearchBoxClear();
-    ruiSpinner();
+    setRuiSelectBoxEventListener();
+    setRuiSearchBoxEventListener();
+    addRuiSpinnerFunctions();
   });
 
 });
