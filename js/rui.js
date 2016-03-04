@@ -1,4 +1,4 @@
-require(['jquery'], function($) {
+(function($) {
   function setRuiSelectBoxEventListener() {
     $('.js_select_button').click(function() {
       var selectWrapper = $(this).parents('.js_select_wrapper').eq(0);
@@ -47,5 +47,4 @@ require(['jquery'], function($) {
     setRuiSearchBoxEventListener();
     addRuiSpinnerFunctions();
   });
-
-});
+})(jQuery);
