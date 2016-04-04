@@ -1,0 +1,26 @@
+{
+  "name": "rui",
+  "description": "Ridibooks-UI",
+  "main": "",
+  "authors": [
+    "nnyamm@ridi.com"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ridibooks",
+    "ridi",
+    "rui",
+    "ui"
+  ],
+  "homepage": "https://github.com/ridibooks/rui",
+  "moduleType": [
+    "es6"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
