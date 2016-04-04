@@ -8,13 +8,15 @@
     "junwoo@ridi.com"
   ],
   "homepage": "https://github.com/ridibooks/rui",
+  "main": "",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests",
-    "Gruntfile.js"
+    "Gruntfile.js",
+    "grunt"
   ],
   "keywords": [
     "ridibooks",
