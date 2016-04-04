@@ -1,0 +1,5 @@
+{
+  "baseClass": "ruicon",
+  "classPrefix": "ruicon-",
+  "mixinPrefix": "ruicon_"
+}

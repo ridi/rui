@@ -1,0 +1,58 @@
+// RUI, icon-font, colorchips page navigation style
+
+body {
+  padding: 0; margin: 0; cursor: default;
+}
+.header_wrapper {
+  background: #0282da; padding: 0 30px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.header_wrapper a { text-decoration: none; }
+.header_wrapper ul { margin: 0; padding: 0; }
+.header_wrapper .header_title {
+  display: inline-block; padding-right: 30px; margin: 0;
+}
+.header_wrapper .header_title a {
+  display: block; height: 46px; line-height: 46px;
+  color: white; font-size: 24px; font-weight: bold; letter-spacing: -.03em;
+}
+.navigation_wrapper {
+  margin: 0; display: inline-block; vertical-align: top;
+}
+.navigation_wrapper li {
+  margin: 0; display: inline-block; position: relative;
+}
+.navigation_wrapper li .icon-arrow_1_down,
+.navigation_wrapper li .icon-arrow_1_right {
+  display: inline-block; vertical-align: 0;
+  font-size: 10px; padding-left: 3px;
+}
+.navigation_wrapper li a,
+.navigation_wrapper li .submenu_toggle_button{
+  display: block; height: 46px; line-height: 46px; cursor: pointer;
+  font-size: 14px; color: white; padding: 0 20px 0 10px; letter-spacing: -.03em; font-weight: normal;
+}
+.navigation_wrapper li .submenu {
+  display: block; position: absolute; left: 0; top: 45px;
+  background: #0282da; margin: 0; vertical-align: top; z-index: 999;
+}
+.navigation_wrapper li .submenu li {
+  display: block; overflow: hidden; height: 0;
+  -webkit-transition: height .2s;
+  transition: height .2s;
+}
+.navigation_wrapper li .submenu li a {
+  height: 36px; line-height: 36px; white-space: nowrap;
+  -webkit-transition: background .2s, color .2s;
+  transition: background .2s, color .2s;
+}
+.navigation_wrapper li .submenu li a:hover {
+  background: white; color: #333;
+}
+.navigation_wrapper li:hover .submenu {
+  border: 1px solid #0282da;
+}
+.navigation_wrapper li:hover .submenu li {
+  height: 36px;
+}

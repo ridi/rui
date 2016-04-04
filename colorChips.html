@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta charset="utf-8"/>
+  <title>RIDI ColorChips</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/page.css?20160120"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/navigation.css?20160120"/>
+  <style>
+    #page_colorchips{ padding: 40px 30px; }
+    #page_colorchips h1{ font-size: 24px; color: black; font-weight: bold; padding: 5px; font-family: helvetica, arial, sans-serif; }
+    #page_colorchips ul{ }
+    #page_colorchips ul li{ display: inline-block; width: 150px; margin: 10px 5px;}
+    #page_colorchips ul li .chip{ height: 100px; }
+    #page_colorchips ul li button{
+      -webkit-appearance: none; border: none; width: 100%;
+      text-align: center; background: black; padding: 7px; line-height: 1.5em; color: white; font-size: 13px;
+    }
+    #page_colorchips ul li button:hover{
+
+    }
+    #page_colorchips ul li button:focus{
+      background: #333;
+    }
+    #page_colorchips ul li button .title{ font-family: helvetica, arial, sans-serif; }
+    #page_colorchips ul li button .code{  font-family: helvetica, arial, sans-serif; }
+  </style>
+  <script src="//static.ridibooks.com/books/bower_components/jquery/dist/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $('.js_chip_button').click(function() {
+        str = $(this).find('.code').text();
+        //for IE ONLY!
+        window.clipboardData.setData('Text',str);
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="header_wrapper">
+    <h1 class="header_title"><a href="http://ridibooks.com">RIDIBOOKS</a></h1>
+    <ul class="navigation_wrapper">
+      <li><span class="submenu_toggle_button">RUI ▾</span>
+        <ul class="submenu">
+          <li><a href="http://static.ridibooks.com/rui/index.html?20160120">PC, Mobile</a></li>
+          <li><a href="http://static.ridibooks.com/rui/index.e.html?20160120">PAPER</a></li>
+        </ul>
+      </li>
+      <li><span class="submenu_toggle_button">IconFont ▾</span>
+        <ul class="submenu">
+          <li><a href="http://static.ridibooks.com/books/icon/ridi-icon.html?20160120">서점 IconFont</a></li>
+          <li><a href="http://static.ridibooks.com/rui/icon/ruicon.html?20160120">RUI IconFont</a></li>
+        </ul>
+      </li>
+      <li><a href="http://static.ridibooks.com/rui/colorChips.html?20160120">ColorChips ▸</a></li>
+    </ul>
+  </div>
+  <div id="ridi_books">
+    <div id="books_contents">
+      <div id="contents_page">
+        <section id="page_colorchips">
+          <h1>RIDI ColorChips</h1>
+          <article>
+            <ul>
+              <li>
+                <div class="chip" style="background: #34a0e3;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_blue1</span><br><span class="code">#34a0e3</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #0089d2;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_blue2</span><br><span class="code">#0089d2</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #1071a5;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_blue3</span><br><span class="code">#1071a5</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #1f8ee6;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_dodgerblue_1</span><br><span class="code">#1f8ee6</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #0f5d9c;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_dodgerblue_2</span><br><span class="code">#0f5d9c</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #0282da;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_dodgerblue_3</span><br><span class="code">#0282da</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #0078d5;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_dodgerblue_4</span><br><span class="code">#0078d5</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #53ABE8;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_dodgerblue_5</span><br><span class="code">#53ABE8</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #80bcea;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_dodgerblue_6</span><br><span class="code">#80bcea</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #1a79c4;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_dodgerblue_7</span><br><span class="code">#1a79c4</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #2ea2ff;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_dodgerblue_8</span><br><span class="code">#2ea2ff</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #0067b6;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_dodgerblue_9</span><br><span class="code">#0067b6</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #02406f;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_dodgerblue_10</span><br><span class="code">#02406f</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #5382b9;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluejean_1</span><br><span class="code">#5382b9</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #4076b5;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluejean_2</span><br><span class="code">#4076b5</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #87b4e9;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluejean_3</span><br><span class="code">#87b4e9</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #204aaa;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_facebookblue_1</span><br><span class="code">#204aaa</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #1b3f91;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_facebookblue_2</span><br><span class="code">#1b3f91</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #cbf0ff;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_lightskyblue_1</span><br><span class="code">#cbf0ff</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #e6f5ff;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_lightskyblue_2</span><br><span class="code">#e6f5ff</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #eef8ff;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_lightsteelblue_1</span><br><span class="code">#eef8ff</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #c4d2dd;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_lightsteelblue_2</span><br><span class="code">#c4d2dd</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #f5faff;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_lightsteelblue_3</span><br><span class="code">#f5faff</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #eff5fa;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_lightsteelblue_4</span><br><span class="code">#eff5fa</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #e7f5ff;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_lightsteelblue_5</span><br><span class="code">#e7f5ff</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #b8c6d0;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_lightsteelblue_6</span><br><span class="code">#b8c6d0</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #d9e2eb;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_lightsteelblue_7</span><br><span class="code">#d9e2eb</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #a1afbb;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_1</span><br><span class="code">#a1afbb</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #8595a2;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_2</span><br><span class="code">#8595a2</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #5b6f7f;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_3</span><br><span class="code">#5b6f7f</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #6c8094;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_4</span><br><span class="code">#6c8094</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #cddce5;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_5</span><br><span class="code">#cddce5</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #7e97ad;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_6</span><br><span class="code">#7e97ad</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #2b323e;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_7</span><br><span class="code">#2b323e</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #252d3a;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_8</span><br><span class="code">#252d3a</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #1c232e;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_9</span><br><span class="code">#1c232e</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #171d26;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_10</span><br><span class="code">#171d26</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #15191e;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_11</span><br><span class="code">#15191e</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #232a36;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_12</span><br><span class="code">#232a36</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #303745;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_13</span><br><span class="code">#303745</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #495262;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_14</span><br><span class="code">#495262</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #3b4350;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_15</span><br><span class="code">#3b4350</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #778691;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_16</span><br><span class="code">#778691</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #545f6f;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_bluegray_17</span><br><span class="code">#545f6f</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #626d75;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_slategray_1</span><br><span class="code">#626d75</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #373a3c;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_slategray_2</span><br><span class="code">#373a3c</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #41474b;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_slategray_3</span><br><span class="code">#41474b</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #ced2d6;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_slategray_4</span><br><span class="code">#ced2d6</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #818a92;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_slategray_5</span><br><span class="code">#818a92</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #f3f4f5;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_slategray_6</span><br><span class="code">#f3f4f5</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #2b2f33;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_slategray_7</span><br><span class="code">#2b2f33</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #e5e8eb;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_slategray_8</span><br><span class="code">#e5e8eb</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #abb3ba;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_slategray_9</span><br><span class="code">#abb3ba</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #d5dadf;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_slategray_10</span><br><span class="code">#d5dadf</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #6f7b84;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_slategray_11</span><br><span class="code">#6f7b84</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #eff5fa;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_slategray_12</span><br><span class="code">#eff5fa</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #ccd5db;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_slategray_13</span><br><span class="code">#ccd5db</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #f7f8f9;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_slategray_14</span><br><span class="code">#f7f8f9</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #e74c3c;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_grapefruit_1</span><br><span class="code">#e74c3c</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #e03b44;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_grapefruit_2</span><br><span class="code">#e03b44</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #ea6d60;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_grapefruit_3</span><br><span class="code">#ea6d60</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #9d483f;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_grapefruit_4</span><br><span class="code">#9d483f</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #ed6d2f;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_carrot_1</span><br><span class="code">#ed6d2f</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #f77a87;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_pink_1</span><br><span class="code">#f77a87</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #f88792;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_pink_2</span><br><span class="code">#f88792</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #ff5751;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_pink_3</span><br><span class="code">#ff5751</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #fff9e9;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_beige_1</span><br><span class="code">#fff9e9</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #e6d5b6;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_beige_2</span><br><span class="code">#e6d5b6</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #9e763b;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_brown_1</span><br><span class="code">#9e763b</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #b1874a;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_brown_2</span><br><span class="code">#b1874a</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #916b33;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_brown_3</span><br><span class="code">#916b33</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #1eafce;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_turquoise_1</span><br><span class="code">#1eafce</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #13a2c0;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_turquoise_2</span><br><span class="code">#13a2c0</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #5fce0c;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_greengrape_1</span><br><span class="code">#5fce0c</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #4dd965;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_greengrape_2</span><br><span class="code">#4dd965</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #47a500;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_greengrape_3</span><br><span class="code">#47a500</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #ffdd23;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_lemon_1</span><br><span class="code">#ffdd23</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #333;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_gray3</span><br><span class="code">#333</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #666;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_gray6</span><br><span class="code">#666</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #999;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_gray9</span><br><span class="code">#999</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #bbb;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_grayb</span><br><span class="code">#bbb</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #ddd;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_grayd</span><br><span class="code">#ddd</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #ff5100;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_red_1</span><br><span class="code">#ff5100</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #0357af;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_sapphireblue_1</span><br><span class="code">#0357af</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #d0914c;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_comic</span><br><span class="code">#d0914c</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #9c82bd;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_fanmu</span><br><span class="code">#9c82bd</span></button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <div class="chip" style="background: #e7d87c;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_highlighter_yellow</span><br><span class="code">#e7d87c;</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #bed370;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_highlighter_green</span><br><span class="code">#bed370;</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #be93cc;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_highlighter_purple</span><br><span class="code">#be93cc;</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #7cb9c8;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_highlighter_blue</span><br><span class="code">#7cb9c8;</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #d6959c;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_highlighter_pink</span><br><span class="code">#d6959c;</span></button>
+              </li>
+              <li>
+                <div class="chip" style="background: #c92424;"></div>
+                <button type="button" class="js_chip_button"><span class="title">@color_highlighter_red</span><br><span class="code">#c92424;</span></button>
+              </li>
+            </ul>
+          </article>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -3,39 +3,31 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta charset="utf-8"/>
-  <title>RIDI UI</title>
-  <link rel="stylesheet" type="text/css" media="screen" href="css/page.css"/>
-  <link rel="stylesheet" type="text/css" media="screen" href="css/navigation.css"/>
-  <link rel="stylesheet" type="text/css" media="screen" href="css/rui.css"/>
-  <!--[if lt IE 9]>
-    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
-  <script src="//cdn.jsdelivr.net/jquery/1.11.3/jquery.min.js"></script>
-  <!--[if lte IE 8]>  
-    <script src="js/rui_ie8.js"></script>  
-  <![endif]-->
+  <title>RUI-PC,M</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="http://static.ridibooks.com/books/css/common/reset.css?20160120"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/page.css?20160120"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/navigation.css?20160120"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/rui.css?20160120"/>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="js/rui.js"></script>
 </head>
-<!--[if lte IE 8]>
-<body id="browser_ie8">
-<![endif]-->
-<!--[if IE 9]>
-<body id="browser_ie9">
-<![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<body id="browser_modern">
-<!--<![endif]-->
+<body>
   <div class="header_wrapper">
     <h1 class="header_title"><a href="http://ridibooks.com">RIDIBOOKS</a></h1>
     <ul class="navigation_wrapper">
-      <li><a href="http://static.ridibooks.com/rui/">RUI ▸</a></li>
-      <li><span class="submenu_toggle_button">IconFont ▾</span>
+      <li><span class="submenu_toggle_button">RUI ▾</span>
         <ul class="submenu">
-          <li><a href="http://static.ridibooks.com/books/icon/ridi-icon.html">서점 IconFont</a></li>
-          <li><a href="http://static.ridibooks.com/rui/icon/ruicon.html">RUI IconFont</a></li>
+          <li><a href="http://static.ridibooks.com/rui/index.html?20160120">PC, Mobile</a></li>
+          <li><a href="http://static.ridibooks.com/rui/index.e.html?20160120">PAPER</a></li>
         </ul>
       </li>
-      <li><a href="http://static.ridibooks.com/rui/colorChips.html">ColorChips ▸</a></li>
+      <li><span class="submenu_toggle_button">IconFont ▾</span>
+        <ul class="submenu">
+          <li><a href="http://static.ridibooks.com/books/icon/ridi-icon.html?20160120">서점 IconFont</a></li>
+          <li><a href="http://static.ridibooks.com/rui/icon/ruicon.html?20160120">RUI IconFont</a></li>
+        </ul>
+      </li>
+      <li><a href="http://static.ridibooks.com/rui/colorChips.html?20160120">ColorChips ▸</a></li>
     </ul>
   </div>
   <div id="ridi_books">
@@ -46,7 +38,7 @@
 
           <!-- {# ============================================================= button #} -->
           <article class="test_article">
-            <h2>버튼세트 rui_button, disabled 방식 2가지(class, attribute)</h2>
+            <h2>버튼세트 rui_button : disabled 방식은 class, attribute 둘다 대응</h2>
             <ul class="test_ul">
               <li class="test_li">
                 <button type="button" class="rui_button_blue_21">구매하기</button>
@@ -54,7 +46,9 @@
                 <button type="button" class="rui_button_blue_30">구매하기</button>
                 <button type="button" class="rui_button_blue_40">구매하기</button>
                 <button type="button" class="rui_button_blue_50">구매하기</button>
+                <button type="button" class="rui_button_blue_50 spinner">구매하기</button>
                 <button type="button" class="rui_button_blue_50 disabled">구매하기</button>
+                <button type="button" class="rui_button_blue_50 disabled spinner">구매하기</button>
               </li>
               <li class="test_li">
                 <button type="button" class="rui_button_blue_line_21">구매하기</button>
@@ -62,7 +56,9 @@
                 <button type="button" class="rui_button_blue_line_30">구매하기</button>
                 <button type="button" class="rui_button_blue_line_40">구매하기</button>
                 <button type="button" class="rui_button_blue_line_50">구매하기</button>
+                <button type="button" class="rui_button_blue_line_50 spinner">구매하기</button>
                 <button type="button" class="rui_button_blue_line_50 disabled">구매하기</button>
+                <button type="button" class="rui_button_blue_line_50 disabled spinner">구매하기</button>
               </li>
               <li class="test_li">
                 <button type="button" class="rui_button_gray_21">구매하기</button>
@@ -70,7 +66,9 @@
                 <button type="button" class="rui_button_gray_30">구매하기</button>
                 <button type="button" class="rui_button_gray_40">구매하기</button>
                 <button type="button" class="rui_button_gray_50">구매하기</button>
+                <button type="button" class="rui_button_gray_50 spinner">구매하기</button>
                 <button type="button" class="rui_button_gray_50" disabled="disabled">구매하기</button>
+                <button type="button" class="rui_button_gray_50 spinner" disabled="disabled">구매하기</button>
               </li>
               <li class="test_li">
                 <button type="button" class="rui_button_white_21">구매하기</button>
@@ -78,7 +76,9 @@
                 <button type="button" class="rui_button_white_30">구매하기</button>
                 <button type="button" class="rui_button_white_40">구매하기</button>
                 <button type="button" class="rui_button_white_50">구매하기</button>
+                <button type="button" class="rui_button_white_50 spinner">구매하기</button>
                 <button type="button" class="rui_button_white_50" disabled="disabled">구매하기</button>
+                <button type="button" class="rui_button_white_50 spinner" disabled="disabled">구매하기</button>
               </li>
             </ul>
           </article>
@@ -101,7 +101,7 @@
               </li>
             </ul>
           </article>
-          
+
           <!-- {# ============================================================= radio_checkbox #} -->
           <article class="test_article">
             <h2>체크박스 rui_checkbox_input, label</h2>
@@ -189,7 +189,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="test_li"> 
+              <li class="test_li">
                 <!-- 외곽선이 있는 셀렉터 -->
                 <div class="rui_select_2 js_select_wrapper">
                   <input type="hidden" class="js_selected_value" value="">
@@ -231,7 +231,7 @@
                 <input type="text" class="rui_text_input" placeholder="Text input">
               </li>
               <li class="test_li">
-                <input type="text" class="rui_text_input" readonly="readonly" value="읽기전용 Read-only">
+                <input type="text" class="rui_text_input" readonly="readonly" placeholder="읽기전용 Read-only" value="읽기전용 Read-only">
               </li>
               <li class="test_li">
                 <input type="text" class="rui_text_input" disabled="disabled" placeholder="비활성화 Disabled">
@@ -244,13 +244,13 @@
             <h2>장문입력 rui_textarea</h2>
             <ul class="test_ul">
               <li class="test_li">
-                <textarea name="text_area" id="text-area" class="rui_textarea" cols="50" rows="4" placeholder="문장입력 Textarea"></textarea>
+                <textarea name="text_area" class="rui_textarea" cols="50" rows="4" placeholder="문장입력 Textarea"></textarea>
               </li>
               <li class="test_li">
-                <textarea name="text_area" id="text-area" class="rui_textarea" cols="50" rows="4" readonly="readonly">읽기전용 Read-only</textarea>
+                <textarea name="text_area" class="rui_textarea" cols="50" rows="4" placeholder="읽기전용 Read-only" readonly="readonly">읽기전용 Read-only</textarea>
               </li>
               <li class="test_li">
-                <textarea name="text_area" id="text-area" class="rui_textarea" cols="50" rows="4" disabled="disabled">비활성화 Disabled</textarea>
+                <textarea name="text_area" class="rui_textarea" cols="50" rows="4" placeholder="비활성화 Disabled" disabled="disabled">비활성화 Disabled</textarea>
               </li>
             </ul>
           </article>
@@ -267,7 +267,7 @@
                       <span class="ruicon-dotdotdot"></span>
                     </li>
                     <li class="previous_page_button">
-                      <a href="#"><span class="ruicon-arrow_8_left"></a>
+                      <a href="#"><span class="ruicon-arrow_8_left"></span></a>
                     </li>
                     <li class="page_buttons">
                       <a class="first_button" href="#">6</a>
@@ -296,9 +296,9 @@
               <li class="test_li">
                 <ul class="rui_compact_pagination">
                   <li class="left_button_wrapper">
-                    <button class="compact_button" type="button"><span class="ruicon-arrow_8_left"><span class="hidden">이전</span></button>
+                    <button class="compact_button" type="button"><span class="ruicon-arrow_8_left"><span class="hidden">이전</span></span></button>
                   </li><li class="right_button_wrapper">
-                    <button class="compact_button" type="button"><span class="ruicon-arrow_8_right"><span class="hidden">다음</span></button>
+                    <button class="compact_button" type="button"><span class="ruicon-arrow_8_right"><span class="hidden">다음</span></span></button>
                   </li>
                 </ul>
               </li>
@@ -320,7 +320,7 @@
               </li>
             </ul>
           </article>
-          
+
           <!-- {# ============================================================= compact_pagination #} -->
           <article class="test_article">
             <h2>툴팁 rui_tooltip</h2>
@@ -341,7 +341,7 @@
               </li>
             </ul>
           </article>
-          
+
           <!-- {# ============================================================= tab_1 #} -->
           <article class="test_article">
             <h2>탭 rui_tab_1</h2>
@@ -423,7 +423,7 @@
                     <li class="tab_list"><a href="#" class="tab_item">로맨스</a></li>
                     <li class="tab_list"><a href="#" class="tab_item">판타지무협</a></li>
                     <li class="tab_list"><a href="#" class="tab_item">만화</a></li>
-                  </ul>          
+                  </ul>
                   <ul class="rui_order">
                     <!-- {% spaceless %} -->
                       <li class="order_list"><a href="#" class="active">인기순</a></li>
@@ -440,7 +440,7 @@
                     <li class="tab_list"><a href="#" class="tab_item">로맨스</a></li>
                     <li class="tab_list"><a href="#" class="tab_item">판타지무협</a></li>
                     <li class="tab_list"><a href="#" class="tab_item">만화</a></li>
-                  </ul>          
+                  </ul>
                   <ul class="rui_order">
                     <!-- {% spaceless %} -->
                       <li class="order_list"><a href="#" class="active">인기순</a></li>
@@ -466,9 +466,9 @@
                         <li class="order_list"><span class="ruicon-dot_1"></span><a href="#">최신순</a></li>
                         <li class="order_list"><span class="ruicon-dot_1"></span><a href="#">평점순</a></li>
                       <!-- {% endspaceless %} -->
-                    </ul>   
+                    </ul>
                   </div>
-                  <div class="right_column">       
+                  <div class="right_column">
                     <ul class="rui_order">
                       <!-- {% spaceless %} -->
                         <li class="order_list"><a href="#" class="active">인기순</a></li>
@@ -498,7 +498,7 @@
               </li>
             </ul>
           </article>
-          
+
           <!-- {# ============================================================= title_1 #} -->
           <article class="test_article">
             <h2>제목 스타일 rui_title_1</h2>
@@ -554,7 +554,7 @@
                   <h3 class="parent_title" >
                     <a href="#">
                       <span class="ruicon-feather"></span> 카테고리
-                    </a> 
+                    </a>
                   </h3>
                   <span class="ruicon-arrow_8_right"></span>
                   <p class="children_text">세부 카테고리</p>
@@ -576,7 +576,7 @@
               </li>
             </ul>
           </article>
-          
+
           <!-- {# ============================================================= rui_full_alert_1 #} -->
           <article class="test_article">
             <h2>페이지 전체 경고문구, 2단구조, 주로 PC rui_full_alert_1</h2>
