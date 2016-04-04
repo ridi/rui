@@ -1,26 +1,25 @@
 {
   "name": "rui",
+  "version": "0.1.0",
   "description": "Ridibooks-UI",
-  "main": "",
-  "authors": [
-    "nnyamm@ridi.com"
-  ],
   "license": "MIT",
-  "keywords": [
-    "ridibooks",
-    "ridi",
-    "rui",
-    "ui"
+  "authors": [
+    "nnyamm@ridi.com",
+    "junwoo@ridi.com"
   ],
   "homepage": "https://github.com/ridibooks/rui",
-  "moduleType": [
-    "es6"
-  ],
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "Gruntfile.js"
+  ],
+  "keywords": [
+    "ridibooks",
+    "ridi",
+    "rui",
+    "ui"
   ]
 }
