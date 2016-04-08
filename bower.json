@@ -8,7 +8,9 @@
     "junwoo.lee@ridi.com"
   ],
   "homepage": "https://github.com/ridibooks/rui",
-  "main": "",
+  "main": [
+    "js/rui.js"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
