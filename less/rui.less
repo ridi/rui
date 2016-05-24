@@ -67,14 +67,19 @@
   &:link, &:visited, &:hover, &:focus {
     color: white;
   }
-  &:hover, &:focus {
+  &:active {
     background: @color_dodgerblue_3;
   }
   &.spinner {
     &, span {
       color: @color_dodgerblue_1!important;
     }
-    &:hover, &:focus {
+    //&:hover, &:focus {
+    //  &, span {
+    //    color: @color_dodgerblue_3!important;
+    //  }
+    //}
+    &:active {
       &, span {
         color: @color_dodgerblue_3!important;
       }
@@ -82,6 +87,38 @@
     &:after {
       background: url(../images/spinner/blue.gif) no-repeat center;
       background-size: 20px;
+    }
+  }
+  &:disabled, &.disabled {
+    //&:hover, &:focus {
+    //  background: @color_dodgerblue_1;
+    //}
+    &:active {
+      background: @color_dodgerblue_1;
+    }
+    &.spinner {
+      //&:hover, &:focus {
+      //  &, span {
+      //    color: @color_dodgerblue_1!important;
+      //  }
+      //}
+      &:active {
+        &, span {
+          color: @color_dodgerblue_1!important;
+        }
+      }
+    }
+  }
+}
+.rui_button_blue_hover() {
+  &:hover, &:focus {
+    background: @color_dodgerblue_3;
+  }
+  &.spinner {
+    &:hover, &:focus {
+      &, span {
+        color: @color_dodgerblue_3!important;
+      }
     }
   }
   &:disabled, &.disabled {
@@ -108,14 +145,22 @@
   &:link, &:visited, &:hover, &:focus {
     color: @color_dodgerblue_1;
   }
-  &:hover, &:focus {
+  //&:hover, &:focus {
+  //  background: @color_lightsteelblue_3;
+  //}
+  &:active {
     background: @color_lightsteelblue_3;
   }
   &.spinner {
     &, span {
       color: white!important;
     }
-    &:hover, &:focus {
+    //&:hover, &:focus {
+    //  &, span {
+    //    color: @color_lightsteelblue_3!important;
+    //  }
+    //}
+    &:active {
       &, span {
         color: @color_lightsteelblue_3!important;
       }
@@ -123,6 +168,34 @@
     &:after {
       background: url(../images/spinner/blue_line.gif) no-repeat center;
       background-size: 20px;
+    }
+  }
+  &:disabled, &.disabled {
+    //&:hover, &:focus {
+    //  background: white;
+    //}
+    &:active {
+      background: white;
+    }
+    &.spinner {
+      //&:hover, &:focus {
+      //  color: white;
+      //}
+      &:active {
+        color: white;
+      }
+    }
+  }
+}
+.rui_button_blue_line_hover() {
+  &:hover, &:focus {
+    background: @color_lightsteelblue_3;
+  }
+  &.spinner {
+    &:hover, &:focus {
+      &, span {
+        color: @color_lightsteelblue_3!important;
+      }
     }
   }
   &:disabled, &.disabled {
@@ -147,14 +220,22 @@
   &:link, &:visited, &:hover, &:focus {
     color: white;
   }
-  &:hover, &:focus {
+  //&:hover, &:focus {
+  //  background: @color_bluegray_16;
+  //}
+  &:active {
     background: @color_bluegray_16;
   }
   &.spinner {
     &, span {
       color: @color_bluegray_2!important;
     }
-    &:hover, &:focus {
+    //&:hover, &:focus {
+    //  &, span {
+    //    color: @color_bluegray_16!important;
+    //  }
+    //}
+    &:active {
       &, span {
         color: @color_bluegray_16!important;
       }
@@ -162,6 +243,38 @@
     &:after {
       background: url(../images/spinner/gray.gif) no-repeat center;
       background-size: 20px;
+    }
+  }
+  &:disabled, &.disabled {
+    //&:hover, &:focus {
+    //  background: @color_bluegray_2;
+    //}
+    &:active {
+      background: @color_bluegray_2;
+    }
+    &.spinner {
+      //&:hover, &:focus {
+      //  &, span {
+      //    color: @color_bluegray_2!important;
+      //  }
+      //}
+      &:active {
+        &, span {
+          color: @color_bluegray_2!important;
+        }
+      }
+    }
+  }
+}
+.rui_button_gray_hover() {
+  &:hover, &:focus {
+    background: @color_bluegray_16;
+  }
+  &.spinner {
+    &:hover, &:focus {
+      &, span {
+        color: @color_bluegray_16!important;
+      }
     }
   }
   &:disabled, &.disabled {
@@ -188,14 +301,22 @@
   &:link, &:visited, &:hover, &:focus {
     color: @color_slategray_5;
   }
-  &:hover, &:focus {
+  //&:hover, &:focus {
+  //  background: @color_slategray_6;
+  //}
+  &:active {
     background: @color_slategray_6;
   }
   &.spinner {
     &, span {
       color: white!important;
     }
-    &:hover, &:focus {
+    //&:hover, &:focus {
+    //  &, span {
+    //    color: @color_slategray_6!important;
+    //  }
+    //}
+    &:active {
       &, span {
         color: @color_slategray_6!important;
       }
@@ -203,6 +324,38 @@
     &:after {
       background: url(../images/spinner/gray_line.gif) no-repeat center;
       background-size: 20px;
+    }
+  }
+  &:disabled, .disabled {
+    //&:hover, &:focus {
+    //  background: white;
+    //}
+    &:active {
+      background: white;
+    }
+    &.spinner {
+      //&:hover, &:focus {
+      //  &, span {
+      //    color: white!important;
+      //  }
+      //}
+      &:active {
+        &, span {
+          color: white!important;
+        }
+      }
+    }
+  }
+}
+.rui_button_white_hover() {
+  &:hover, &:focus {
+    background: @color_slategray_6;
+  }
+  &.spinner {
+    &:hover, &:focus {
+      &, span {
+        color: @color_slategray_6!important;
+      }
     }
   }
   &:disabled, .disabled {
@@ -287,9 +440,6 @@
 .rui_radio_input {
   -webkit-appearance: none; -moz-appearance: none; appearance: none;
   position: absolute; width: 0; height: 0; left: -9999px;
-  &:hover + label:before {
-    border-color: @color_slategray_5;
-  }
   &:focus + label:before {
     border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
   }
@@ -333,12 +483,6 @@
     .border_radius(@radio_size);
     .transition(~"background .2s, border-color .2s");
   }
-  &:hover {
-    color: @color_slategray_1;
-    &:before {
-      border-color: @color_slategray_5;
-    }
-  }
   &:focus {
     &:before {
       border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
@@ -350,9 +494,6 @@
 .rui_checkbox_input {
   -webkit-appearance: none; -moz-appearance: none; appearance: none;
   position: absolute; width: 0; height: 0; left: -9999px;
-  &:hover + label:before {
-    border-color: @color_slategray_5;
-  }
   &:focus + label:before {
     border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
   }
@@ -390,12 +531,6 @@
     text-align: center; line-height: @checkbox_size;
     display: none; width: @checkbox_size; height: @checkbox_size; .box_sizing(~"border-box");
     position: absolute; left: 0; top: 50%; margin-top: -@checkbox_size / 2 - 1px;
-  }
-  &:hover {
-    color: @color_slategray_1;
-    &:before {
-      border-color: @color_slategray_5;
-    }
   }
   &:focus {
     &:before {
@@ -1164,6 +1299,48 @@
     }
     thead th, tfoot td, tbody th {
       background: #f6f6f6; font-weight: bold; color: #333333;
+    }
+  }
+}
+
+
+// ============================================================================== PC 환경에서만 hover 속성 추가하기 위함
+body:not(.mobile_device) {
+  // rui_buttons
+  .rui_button_blue_21, .rui_button_blue_25, .rui_button_blue_30, .rui_button_blue_40, .rui_button_blue_50 {
+    .rui_button_blue_hover();
+  }
+  .rui_button_blue_line_21, .rui_button_blue_line_25, .rui_button_blue_line_30, .rui_button_blue_line_40, .rui_button_blue_line_50 {
+    .rui_button_blue_line_hover();
+  }
+  .rui_button_gray_21, .rui_button_gray_25, .rui_button_gray_30, .rui_button_gray_40, .rui_button_gray_50 {
+    .rui_button_gray_hover();
+  }
+  .rui_button_white_21, .rui_button_white_25, .rui_button_white_30, .rui_button_white_40, .rui_button_white_50 {
+    .rui_button_white_hover();
+  }
+  // rui_radio
+  .rui_radio_input {
+    &:hover + label:before { border-color: @color_slategray_5; }
+  }
+  .rui_radio_label {
+    &:hover {
+      color: @color_slategray_1;
+      &:before { border-color: @color_slategray_5; }
+    }
+  }
+  // rui_checkbox
+  .rui_checkbox_input {
+    &:hover + label:before {
+      border-color: @color_slategray_5;
+    }
+  }
+  .rui_checkbox_label {
+    &:hover {
+      color: @color_slategray_1;
+      &:before {
+        border-color: @color_slategray_5;
+      }
     }
   }
 }
