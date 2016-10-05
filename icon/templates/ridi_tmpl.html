@@ -7,77 +7,112 @@
   <style>
     <%= styles %>
     .contents_wrapper {
-      padding: 30px; margin: 0; cursor: default;
+      padding: 30px;
+      margin: 0;
+      cursor: default;
     }
+
     h1 {
-      margin: 0; padding: 0; font-size: 24px; font-weight: 600; color: #41474b;
+      margin: 0;
+      padding: 0;
+      font-size: 24px;
+      font-weight: 600;
+      color: #41474b;
     }
+
     .icon_name {
-      margin: 10px 0 0 0; padding: 0; height: 1.5em;
-      font-size: 20px; font-weight: 600; color: #0282da; text-decoration: none;
+      margin: 10px 0 0 0;
+      padding: 0;
+      height: 1.5em;
+      font-size: 20px;
+      font-weight: 600;
+      color: #0282da;
+      text-decoration: none;
     }
+
     ul {
-      margin: 15px 0 0 0; padding: 0;
+      margin: 15px 0 0 0;
+      padding: 0;
     }
+
     ul li {
-      display: inline-block; position: relative;
+      display: inline-block;
+      position: relative;
       margin: 0 10px 20px 0;
     }
+
     ul li a {
-      text-decoration: none; display: block;
+      text-decoration: none;
+      display: block;
     }
+
     ul li a i {
       display: block;
-      background: #eee; color: #41474b;
-      padding: 22px; text-align: center;
-      font-size: 35px; line-height: 35px;
-      min-width: 35px; height: 35px;
+      background: #eee;
+      color: #41474b;
+      padding: 22px;
+      text-align: center;
+      font-size: 35px;
+      line-height: 35px;
+      min-width: 35px;
+      height: 35px;
       -webkit-transition: background .2s, color .2s;
       transition: background .2s, color .2s;
     }
+
     ul li .icon_title {
       cursor: auto;
-      display: block; padding: 5px; background: white; text-align: center;
-      font-size: 11px; color: #999; font-weight: 600; white-space: nowrap;
+      display: block;
+      padding: 5px;
+      background: white;
+      text-align: center;
+      font-size: 11px;
+      color: #999;
+      font-weight: 600;
+      white-space: nowrap;
       -webkit-transition: color .2s;
       transition: color .2s;
     }
+
     ul li a:hover i {
-      background: #0282da; color: white; line-height: 30px;
+      background: #0282da;
+      color: white;
+      line-height: 30px;
     }
+
     ul li:hover .icon_title {
       color: #41474b;
     }
   </style>
 </head>
 <body>
-  <div class="header_wrapper">
-    <h1 class="header_title"><a href="http://ridibooks.com">RIDIBOOKS</a></h1>
+<div class="header_wrapper">
+  <h1 class="header_title"><a href="http://ridibooks.com">RIDIBOOKS</a></h1>
   <ul class="navigation_wrapper">
-      <li><span class="submenu_toggle_button">RUI ▾</span>
-          <ul class="submenu">
-              <li><a href="index.html?20160120">PC, Mobile</a></li>
-              <li><a href="index.e.html?20160120">PAPER</a></li>
-          </ul>
-      </li>
-      <li><a href="icon/ruicon.html?20160120">IconFont ▸</a></li>
-      <li><a href="color-chips.html?20160120">ColorChips ▸</a></li>
+    <li><span class="submenu_toggle_button">RUI ▾</span>
+      <ul class="submenu">
+        <li><a href="../index.html?20160120">PC, Mobile</a></li>
+        <li><a href="../index.e.html?20160120">PAPER</a></li>
+      </ul>
+    </li>
+    <li><a href="ruicon.html?20160120">IconFont ▸</a></li>
+    <li><a href="../color-chips.html?20160120">ColorChips ▸</a></li>
   </ul>
-  </div>
-  <div class="contents_wrapper">
-    <h1>RIDIBOOKS Icon Font</h1>
-    <p class="icon_name">font-family: <%= fontBaseName %></p>
-    <ul id="icons">
-      <% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
-      <li>
-        <a href="http://static.ridibooks.com/books/icon/svg/<%= glyph %>.svg" target="_blank" download>
-          <i class="<%= baseClass %> <%= classPrefix %><%= glyph %>"></i>
-        </a>
-        <span class="icon_title"><%= classPrefix %><%= glyph %></span>
-      </li>
-      <% } %>
-    </ul>
-  </div>
+</div>
+<div class="contents_wrapper">
+  <h1>RIDIBOOKS Icon Font</h1>
+  <p class="icon_name">font-family: <%= fontBaseName %></p>
+  <ul id="icons">
+    <% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
+    <li>
+      <a href="svg/<%= glyph %>.svg" target="_blank" download>
+        <i class="<%= baseClass %> <%= classPrefix %><%= glyph %>"></i>
+      </a>
+      <span class="icon_title"><%= classPrefix %><%= glyph %></span>
+    </li>
+    <% } %>
+  </ul>
+</div>
 </body>
 </html>
 
