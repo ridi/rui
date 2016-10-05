@@ -5,7 +5,6 @@
   "license": "MIT",
   "authors": [
     "nnyamm@ridi.com",
-    "junwoo.lee@ridi.com"
   ],
   "homepage": "https://github.com/ridibooks/rui",
   "main": [
@@ -25,5 +24,8 @@
     "ridi",
     "rui",
     "ui"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "3.1.1"
+  }
 }
