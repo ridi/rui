@@ -5,8 +5,10 @@
   "license": "MIT",
   "authors": [
     "nnyamm@ridi.com",
+    "junwoo.lee@ridi.com",
+    "gyujincho@ridi.com"
   ],
-  "homepage": "https://github.com/ridibooks/rui",
+  "homepage": "https://www.ridicorp.com/rui",
   "main": [
     "js/rui.js"
   ],

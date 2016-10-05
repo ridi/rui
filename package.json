@@ -1,7 +1,24 @@
 {
-  "name": "rui",
+  "name": "ridibooks-rui",
   "version": "0.1.0",
   "description": "Ridibooks-UI",
+  "maintainers": [
+    {
+      "email": "nnyamm@ridi.com",
+      "name": "Daesung Kwon"
+    },
+    {
+      "email": "junwoo.lee@ridi.com",
+      "name": "Junwoo Lee"
+    },
+    {
+      "email": "gyujincho@ridi.com",
+      "name": "Gyujin Cho"
+    }
+  ],
+  "dependencies": {
+    "jquery": "3.1.1"
+  },
   "devDependencies": {
     "async": "^0.9.0",
     "grunt": "^0.4.5",
@@ -12,5 +29,6 @@
     "less-plugin-clean-css": "^1.5.0",
     "load-grunt-config": "^0.19.1",
     "time-grunt": "^1.3.0"
-  }
+  },
+  "license": "MIT"
 }
