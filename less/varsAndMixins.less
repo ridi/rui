@@ -14,18 +14,18 @@
 @queries_320px: ~"only screen and (max-width: 320px)";
 
 .bg_gradation( @start_color, @end_color ){
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@start_color), to(@end_color));/* Safari 4+, Chrome 1-9 */
-  background: -webkit-linear-gradient(top, @start_color, @end_color);/* Safari 5.1+, Mobile Safari, Chrome 10+ */
-  background: -ms-linear-gradient(top, @start_color, @end_color);/* IE 10+ */
-  background: -o-linear-gradient(top, @start_color, @end_color);/* Opera 11.10+ */
-  background: linear-gradient(to bottom, @start_color, @end_color);/* W3C */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@start_color), to(@end_color)); /* Safari 4+, Chrome 1-9 */
+  background: -webkit-linear-gradient(top, @start_color, @end_color); /* Safari 5.1+, Mobile Safari, Chrome 10+ */
+  background: -ms-linear-gradient(top, @start_color, @end_color); /* IE 10+ */
+  background: -o-linear-gradient(top, @start_color, @end_color); /* Opera 11.10+ */
+  background: linear-gradient(to bottom, @start_color, @end_color); /* W3C */
 }
 .bg_gradation_left( @start_color, @end_color ){
-  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(@start_color), to(@end_color));/* Safari 4+, Chrome 1-9 */
-  background: -webkit-linear-gradient(left, @start_color, @end_color);/* Safari 5.1+, Mobile Safari, Chrome 10+ */
-  background: -ms-linear-gradient(left, @start_color, @end_color);/* IE 10+ */
-  background: -o-linear-gradient(left, @start_color, @end_color);/* Opera 11.10+ */
-  background: linear-gradient(to right, @start_color, @end_color);/* W3C */
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(@start_color), to(@end_color)); /* Safari 4+, Chrome 1-9 */
+  background: -webkit-linear-gradient(left, @start_color, @end_color); /* Safari 5.1+, Mobile Safari, Chrome 10+ */
+  background: -ms-linear-gradient(left, @start_color, @end_color); /* IE 10+ */
+  background: -o-linear-gradient(left, @start_color, @end_color); /* Opera 11.10+ */
+  background: linear-gradient(to right, @start_color, @end_color); /* W3C */
 }
 
 .border_radius( @radius_num ){
@@ -174,11 +174,11 @@
 }
 
 .image_sharpen(){
-  image-rendering: -moz-crisp-edges;         /* Firefox */
-  image-rendering:   -o-crisp-edges;         /* Opera */
-  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering:   -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
   image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
 }
 
 .user_select_none(){

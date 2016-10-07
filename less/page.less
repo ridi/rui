@@ -1,7 +1,7 @@
 @import "varsAndMixins.less";
 
-// ================================================================= rui 테스트페이지
-#page_rui{
+// ================================================================= RUI
+#page_rui {
   margin: 0 auto; padding: 30px;
   h1 {
     font-size: 24px; font-weight: bold; color: @color_slategray_2;
@@ -27,5 +27,76 @@
   }
   .rui_select_2 {
     width: 150px;
+  }
+}
+
+// ================================================================= RUIcon
+#page_ruicon {
+  padding: 30px; margin: 0; cursor: default;
+  h1 {
+    margin: 0; padding: 0;
+    font-size: 24px; font-weight: 600; color: #41474b;
+  }
+  .icon_name {
+    margin: 10px 0 0 0; padding: 0; height: 1.5em;
+    font-size: 20px; font-weight: 600; color: #0282da; text-decoration: none;
+  }
+  ul {
+    margin: 15px 0 0 0; padding: 0;
+    li {
+      display: inline-block; position: relative; margin: 0 10px 20px 0;
+      a {
+        display: block; text-decoration: none;
+        i {
+          display: block; background: #eee; padding: 22px; min-width: 35px; height: 35px;
+          color: #41474b; text-align: center;  font-size: 35px; line-height: 35px;
+          -webkit-transition: background .2s, color .2s;
+          transition: background .2s, color .2s;
+        }
+        &:hover {
+          i {
+            background: #0282da; color: white; line-height: 30px;
+          }
+          .icon_title {
+            color: #41474b;
+          }
+        }
+      }
+      .icon_title {
+        cursor: auto; display: block; padding: 5px; background: white;
+        text-align: center; font-size: 11px; color: #999; font-weight: 600;
+        white-space: nowrap;
+        -webkit-transition: color .2s;
+        transition: color .2s;
+      }
+    }
+  }
+}
+
+
+// ================================================================= ColorChips
+#page_colorchips {
+  padding: 40px 30px;
+  h1{
+    font-family: helvetica, arial, sans-serif; font-size: 24px; color: black; font-weight: bold;
+    padding: 5px;
+  }
+  li{
+    display: inline-block; width: 150px; margin: 10px 5px;
+    .chip {
+      height: 100px;
+    }
+    button {
+      -webkit-appearance: none; border: none;
+      width: 100%; padding: 7px; background: black;
+      line-height: 1.5em; color: white; font-size: 13px; text-align: center;
+      &:focus {
+        background: #333;
+      }
+      .title,
+      .code {
+        font-family: helvetica, arial, sans-serif;
+      }
+    }
   }
 }
