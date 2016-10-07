@@ -1,7 +1,6 @@
 @import "colorChips.less";
 @import "base64Image.less";
 
-//media quries
 @queries_high: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
               ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
               ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
@@ -172,7 +171,7 @@
 
 .line_clamp_for_non_webkit( @line_height, @line_number, @fadeout_color: #f4f4f4 ){
   max-height: @line_height * @line_number + .1em; overflow: hidden;
-}//.line_clamp_for_non_webkit()
+}
 
 .image_sharpen(){
   image-rendering: -moz-crisp-edges;         /* Firefox */
@@ -180,7 +179,7 @@
   image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
   image-rendering: crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
-}//.image_rendering_sharpen()
+}
 
 .user_select_none(){
   -webkit-user-select: none;
