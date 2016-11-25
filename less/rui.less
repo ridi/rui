@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "varsAndMixins.less";
+@import "svg_icon.less";
 @import "../icon/css/ruicon.less";
 
 [class^="rui_"], [class*=" rui_"] {
@@ -1060,6 +1061,11 @@
         position: absolute; left: -44px; top: -7px;
         font-size: 34px;
       }
+      .alert_icon {
+        position: absolute; left: -44px; top: -7px;
+        .svg_exclamation_2(@color_brown_1);
+        width: 31px; height: 34px;
+      }
     }
     .alert_description {
       font-size: 13px; color: @color_brown_2; line-height: 1.5em; margin-top: 6px;
@@ -1083,6 +1089,10 @@
       font-size: 17px; font-weight: bold; color: @color_brown_1;
       .ruicon-exclamation_2 {
         font-size: 25px; vertical-align: -14%;
+      }
+      .alert_icon {
+        .svg_exclamation_2(@color_brown_1);
+        width: 23px; height: 22px; vertical-align: bottom;
       }
     }
     .alert_description {
