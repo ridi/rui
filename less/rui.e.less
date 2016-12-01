@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "varsAndMixins.less";
+@import "svg_icon.less";
 @import "../icon/css/ruicon.less";
 
 [class^="rui_"], [class*=" rui_"] {
@@ -955,6 +956,21 @@
       -webkit-appearance: none; background: @color_brown_1; border: 1px solid @color_brown_3;
       padding: 16px 0 13px 0; width: 156px; text-align: center; .border_radius(3px);
       font-size: 15px; font-weight: bold; color: white;
+    }
+  }
+}
+
+// ===================================================================== rui_full_alert_3
+.rui_full_alert_3 {
+  .alert_article {
+    position: relative; padding: 8px 8px 8px 20px;
+    .alert_icon {
+      .svg_exclamation_2(black);
+      display: block; width: 15px; height: 15px;
+      position: absolute; left: 0; top: 9px;
+    }
+    .alert_description {
+      font-size: 13px; color: black; line-height: 1.5em;
     }
   }
 }
