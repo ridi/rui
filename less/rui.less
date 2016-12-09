@@ -1110,7 +1110,7 @@
 // ===================================================================== rui_full_alert_3
 .rui_full_alert_3 {
   .alert_article {
-    background: @color_beige_1; .border_radius(3px);
+    background: @color_beige_1; border: 1px solid @color_beige_2; .border_radius(3px);
     position: relative; padding: 8px 8px 8px 35px;
     .alert_icon {
       .svg_exclamation_2(@color_brown_1);
@@ -1119,6 +1119,15 @@
     }
     .alert_description {
       font-size: 13px; color: @color_brown_2; line-height: 1.5em;
+      .alert_detail_link {
+        font-size: 13px; color: @color_brown_2; line-height: 1.5em;
+        font-weight: bold;
+        &:after {
+          content: ''; display: inline-block;
+          width: 7px; height: 10px; margin-left: 4px;
+          .svg_arrow_9_right(@color_brown_2);
+        }
+      }
     }
   }
 }
