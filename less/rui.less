@@ -1132,6 +1132,31 @@
   }
 }
 
+// ===================================================================== rui_full_alert_4
+.rui_full_alert_4 {
+  .alert_article {
+    background: @color_slategray_6; .border_radius(3px);
+    padding: 27px 0; text-align: center;
+    .alert_icon {
+      .svg_exclamation_2(@color_slategray_4);
+      display: inline-block; width: 15px; height: 15px; vertical-align: -15%;
+      margin-right: 2px;
+    }
+    .alert_description {
+      font-size: 13px; color: @color_slategray_5; line-height: 1.5em;
+      .alert_detail_link {
+        font-size: 13px; color: @color_slategray_5; line-height: 1.5em;
+        font-weight: bold;
+        &:after {
+          content: ''; display: inline-block;
+          width: 7px; height: 10px; margin-left: 4px;
+          .svg_arrow_9_right(@color_slategray_5);
+        }
+      }
+    }
+  }
+}
+
 // ===================================================================== rui_document
 .rui_document {
   h1, h2, h3, h4, h5, h6 {
