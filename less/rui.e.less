@@ -971,6 +971,42 @@
     }
     .alert_description {
       font-size: 13px; color: black; line-height: 1.5em;
+      .alert_detail_link {
+        color: black;
+        &:after {
+          .svg_arrow_9_right(black);
+        }
+      }
+    }
+  }
+}
+
+// ===================================================================== rui_full_alert_4
+.rui_full_alert_4 {
+  .alert_article {
+    background: #eee; .border_radius(3px);
+    padding: 27px 0; text-align: center;
+    .alert_icon {
+      .svg_exclamation_2(black);
+      display: inline-block; width: 15px; height: 15px; vertical-align: -15%;
+      margin-right: 2px;
+    }
+    .alert_description {
+      font-size: 13px; color: black; line-height: 1.5em;
+      .alert_detail_link {
+        display: inline-block; padding: 0; margin: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+        -webkit-appearance: none;
+        font-size: 13px; color: black; line-height: 1.5em;
+        font-weight: bold;
+        &:after {
+          content: ''; display: inline-block;
+          width: 7px; height: 10px; margin-left: 4px;
+          .svg_arrow_9_right(black);
+        }
+      }
     }
   }
 }
