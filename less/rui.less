@@ -21,6 +21,7 @@
   .box_sizing(~"border-box"); .box_shadow(~"none"); .border_radius(4px); outline: none;
   border: none; font-weight: bold;
   display: inline-block; text-align: center; cursor: pointer; line-height: 1em;
+  vertical-align: baseline;
   .transition(~"background .2s, color .2s");
   &.spinner {
     position: relative;
@@ -417,14 +418,14 @@
   &:before {
     @radio_size: 18px; content: ''; background: white;
     display: block; width: @radio_size; height: @radio_size; .box_sizing(~"border-box");
-    position: absolute; left: 0; top: 50%; margin-top: -@radio_size / 2 - 1px;
+    position: absolute; left: 0; top: 50%; margin-top: -@radio_size / 2;
     .border_radius(@radio_size); border: 1px solid @color_slategray_4;
     .transition(~"background .2s, border-color .2s");
   }
   &:after {
     @radio_size: 18px / 3; content: ''; background: white;
     display: block; width: @radio_size; height: @radio_size; .box_sizing(~"border-box");
-    position: absolute; left: 0; top: 50%; margin-left: @radio_size; margin-top: -@radio_size / 2 - 1px;
+    position: absolute; left: 0; top: 50%; margin-left: @radio_size; margin-top: -@radio_size / 2;
     .border_radius(@radio_size);
     .transition(~"background .2s, border-color .2s");
   }
