@@ -15,6 +15,15 @@
   }
 }
 
+.remove_inner_elements_pointer_event() {
+  // label 안에 요소가 있을 경우 터치이벤트가 중첩되어 들어오며 fast click 에서 오류 발생하여 input이 체크가 되지 않는 문제 발생
+  // https://github.com/ftlabs/fastclick/issues/275
+  // 이에 대응하여 label 안에있는 모든 요소의 pointer events 제거
+  &>* {
+    pointer-events: none;
+  }
+}
+
 // ===================================================================== button
 .rui_button() {
   -webkit-appearance: none; -moz-appearance: none; -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -410,6 +419,7 @@
 }
 
 .rui_radio_label {
+  .remove_inner_elements_pointer_event();
   -webkit-appearance: none; -moz-appearance: none; appearance: none;
   display: inline-block; padding-left: 26px; position: relative;
   color: @color_slategray_5; font-size: 13px; font-weight: bold;
@@ -460,6 +470,7 @@
   }
 }
 .rui_checkbox_label {
+  .remove_inner_elements_pointer_event();
   -webkit-appearance: none; -moz-appearance: none; appearance: none;
   display: inline-block; padding-left: 26px; position: relative; margin-right: 10px;
   color: @color_slategray_5; font-size: 13px; font-weight: bold;
