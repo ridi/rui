@@ -30,71 +30,53 @@
 
 .border_radius( @radius_num ){
   border-radius: @radius_num; 
-  -webkit-border-radius: @radius_num; 
 }
 
 .border_radius_top( @radius_num ){
   border-top-right-radius: @radius_num; 
-  -webkit-border-top-right-radius: @radius_num; 
   border-top-left-radius: @radius_num;
-  -webkit-border-top-left-radius: @radius_num; 
 }
 
 .border_radius_bottom( @radius_num ){
   border-bottom-right-radius: @radius_num; 
-  -webkit-border-bottom-right-radius: @radius_num; 
   border-bottom-left-radius: @radius_num;
-  -webkit-border-bottom-left-radius: @radius_num; 
 }
 
 .border_radius_right( @radius_num ){
   border-top-right-radius: @radius_num; 
-  -webkit-border-top-right-radius: @radius_num; 
   border-bottom-right-radius: @radius_num;
-  -webkit-border-bottom-right-radius: @radius_num; 
 }
 
 .border_radius_left( @radius_num ){
   border-top-left-radius: @radius_num; 
-  -webkit-border-top-left-radius: @radius_num; 
   border-bottom-left-radius: @radius_num;
-  -webkit-border-bottom-left-radius: @radius_num; 
 }
 
 .border_radius_top_right( @radius_num ){
   border-top-right-radius: @radius_num;
-  -webkit-border-top-right-radius: @radius_num; 
 }
 
 .border_radius_top_left( @radius_num ){
   border-top-left-radius: @radius_num;
-  -webkit-border-top-left-radius: @radius_num; 
 }
 
 .border_radius_bottom_right( @radius_num ){
   border-bottom-right-radius: @radius_num;
-  -webkit-border-bottom-right-radius: @radius_num; 
 }
 
 .border_radius_bottom_left( @radius_num ){
   border-bottom-left-radius: @radius_num;
-  -webkit-border-bottom-left-radius: @radius_num; 
 }
 
 .box_shadow( @shadow_num ){
   box-shadow: @shadow_num;
-  -webkit-box-shadow: @shadow_num;
 }
 
 .box_sizing( @box_type ){
-  box-sizing: @box_type; 
-  -moz-box-sizing: @box_type; 
-  -webkit-box-sizing: @box_type;
+  box-sizing: @box_type;
 }
 
 .opacity( @value ){
-  @ms_filter: @value * 100;
-  -ms-filter: ~'"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ms_filter})"';
   opacity: @value;
 }
 
@@ -141,7 +123,6 @@
 .line_clamp( @line_num: 2; ){ // 글줄 수 제한 :: @line_num = 글줄 수
   overflow: hidden;
   text-overflow: ellipsis;
-  text-overflow: -o-ellipsis-lastline;
   display: block;
   display: -webkit-box;
   -webkit-line-clamp: @line_num;
