@@ -27,7 +27,7 @@
 // ===================================================================== button
 .rui_button() {
   -webkit-appearance: none; -moz-appearance: none; -webkit-tap-highlight-color: rgba(0,0,0,0);
-  .box_sizing(~"border-box"); .box_shadow(~"none"); .border_radius(4px); outline: none;
+  box-sizing: border-box; box-shadow: none; border-radius: 4px; outline: none;
   border: none; font-weight: bold;
   display: inline-block; text-align: center; cursor: pointer; line-height: 1em;
   vertical-align: baseline;
@@ -43,7 +43,7 @@
     }
   }
   &:disabled, &.disabled {
-    .opacity(.5); cursor: default;
+    opacity: .5; cursor: default;
   }
 }
 .rui_button_size_21() {
@@ -72,12 +72,14 @@
 }
 
 .rui_button_blue() {
-  color: white; background: @color_dodgerblue_1; border: 1px solid @color_dodgerblue_3;
   @red: red(@color_dodgerblue_1);
   @green: green(@color_dodgerblue_1);
   @blue: blue(@color_dodgerblue_1);
+  @rgba_color: rgba(@red, @green, @blue, @opacity);
   @opacity: .3;
-  .box_shadow(~"0 1px 1px 0 rgba(@{red}, @{green}, @{blue}, @{opacity})");
+
+  color: white; background: @color_dodgerblue_1; border: 1px solid @color_dodgerblue_3;
+  box-shadow: 0 1px 1px 0 @rgba_color;
   &:link, &:visited, &:hover, &:focus {
     color: white;
   }
@@ -137,12 +139,14 @@
 }
 
 .rui_button_blue_line() {
-  color: @color_dodgerblue_1; background: white; border: 1px solid @color_dodgerblue_3;
   @red: red(@color_dodgerblue_1);
   @green: green(@color_dodgerblue_1);
   @blue: blue(@color_dodgerblue_1);
+  @rgba_color: rgba(@red, @green, @blue, @opacity);
   @opacity: .3;
-  .box_shadow(~"0 1px 1px 0 rgba(@{red}, @{green}, @{blue}, @{opacity})");
+
+  color: @color_dodgerblue_1; background: white; border: 1px solid @color_dodgerblue_3;
+  box-shadow: 0 1px 1px 0 @rgba_color;
   &:link, &:visited, &:hover, &:focus {
     color: @color_dodgerblue_1;
   }
@@ -198,12 +202,14 @@
 }
 
 .rui_button_gray() {
-  color: white; background: @color_bluegray_2; border: 1px solid @color_bluegray_16;
   @red: red(@color_bluegray_2);
   @green: green(@color_bluegray_2);
   @blue: blue(@color_bluegray_2);
+  @rgba_color: rgba(@red, @green, @blue, @opacity);
   @opacity: .3;
-  .box_shadow(~"0 1px 1px 0 rgba(@{red}, @{green}, @{blue}, @{opacity})");
+
+  color: white; background: @color_bluegray_2; border: 1px solid @color_bluegray_16;
+  box-shadow: 0 1px 1px 0 @rgba_color;
   &:link, &:visited, &:hover, &:focus {
     color: white;
   }
@@ -263,12 +269,14 @@
 }
 
 .rui_button_white() {
-  color: @color_slategray_5; background: white; border: 1px solid @color_slategray_4;
   @red: red(@color_slategray_4);
   @green: green(@color_slategray_4);
   @blue: blue(@color_slategray_4);
+  @rgba_color: rgba(@red, @green, @blue, @opacity);
   @opacity: .3;
-  .box_shadow(~"0 1px 1px 0 rgba(@{red}, @{green}, @{blue}, @{opacity})");
+
+  color: @color_slategray_5; background: white; border: 1px solid @color_slategray_4;
+  box-shadow: 0 1px 1px 0 @rgba_color;
   &:link, &:visited, &:hover, &:focus {
     color: @color_slategray_5;
   }
@@ -396,7 +404,7 @@
   -webkit-appearance: none; -moz-appearance: none; appearance: none;
   position: absolute; width: 0; height: 0; left: -9999px;
   &:focus + label:before {
-    border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
+    border-color: @color_dodgerblue_1; box-shadow: 0 0 4px 0 rgba(31, 142, 230, .1);
   }
   &:checked + label {
     color: @color_slategray_2;
@@ -404,7 +412,7 @@
       border-color: @color_dodgerblue_7; background: @color_dodgerblue_1;
     }
     &:after {
-      .box_shadow(~"0 2px 2px 0 rgba(0,0,0,.15)");
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,.15);
     }
   }
   &:disabled + label {
@@ -427,21 +435,21 @@
   .transition(~"color .2s");
   &:before {
     @radio_size: 18px; content: ''; background: white;
-    display: block; width: @radio_size; height: @radio_size; .box_sizing(~"border-box");
+    display: block; width: @radio_size; height: @radio_size; box-sizing: border-box;
     position: absolute; left: 0; top: 50%; margin-top: -@radio_size / 2;
-    .border_radius(@radio_size); border: 1px solid @color_slategray_4;
+    border-radius: @radio_size; border: 1px solid @color_slategray_4;
     .transition(~"background .2s, border-color .2s");
   }
   &:after {
     @radio_size: 18px / 3; content: ''; background: white;
-    display: block; width: @radio_size; height: @radio_size; .box_sizing(~"border-box");
+    display: block; width: @radio_size; height: @radio_size; box-sizing: border-box;
     position: absolute; left: 0; top: 50%; margin-left: @radio_size; margin-top: -@radio_size / 2;
-    .border_radius(@radio_size);
+    border-radius: @radio_size;
     .transition(~"background .2s, border-color .2s");
   }
   &:focus {
     &:before {
-      border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
+      border-color: @color_dodgerblue_1; box-shadow: 0 0 4px 0 rgba(31, 142, 230, .1);
     }
   }
 }
@@ -451,7 +459,7 @@
   -webkit-appearance: none; -moz-appearance: none; appearance: none;
   position: absolute; width: 0; height: 0; left: -9999px;
   &:focus + label:before {
-    border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
+    border-color: @color_dodgerblue_1; box-shadow: 0 0 4px 0 rgba(31, 142, 230, .1);
   }
   &:checked + label {
     color: @color_slategray_2;
@@ -477,21 +485,21 @@
   .transition(~"color .2s");
   &:before {
     @checkbox_size: 18px; content: ''; background: white;
-    display: block; width: @checkbox_size; height: @checkbox_size; .box_sizing(~"border-box");
+    display: block; width: @checkbox_size; height: @checkbox_size; box-sizing: border-box;
     position: absolute; left: 0; top: 50%; margin-top: -@checkbox_size / 2 - 1px;
-    .border_radius(2px); border: 1px solid @color_slategray_4;
+    border-radius: 2px; border: 1px solid @color_slategray_4;
     .transition(~"background .2s, border-color .2s");
   }
   &:after {
     @checkbox_size: 18px;
     content: '\f112'; font-family: "ruicon", Arial, sans-serif; color: white; font-size: 12px; font-weight: 400;
     text-align: center; line-height: @checkbox_size;
-    display: none; width: @checkbox_size; height: @checkbox_size; .box_sizing(~"border-box");
+    display: none; width: @checkbox_size; height: @checkbox_size; box-sizing: border-box;
     position: absolute; left: 0; top: 50%; margin-top: -@checkbox_size / 2 - 1px;
   }
   &:focus {
     &:before {
-      border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
+      border-color: @color_dodgerblue_1; box-shadow: 0 0 4px 0 rgba(31, 142, 230, .1);
     }
   }
 }
@@ -502,7 +510,7 @@
   .select_button, .option {
     -webkit-appearance: none; -moz-appearance: none; border: none;
     background: none; -webkit-tap-highlight-color: rgba(0,0,0,0);
-    .box_sizing(~"content-box"); .box_shadow(~"none");
+    .box_sizing(~"content-box"); box-shadow: none;
   }
   .select_button {
     display: block; position: relative; width: 100%; height: 1em; padding: 10px 0;
@@ -519,7 +527,7 @@
     position: absolute; top: 39px; max-height: 0;
     background: white; border: 2px solid @color_slategray_5;
     overflow: hidden; z-index: 300;
-    .border_radius(3px); .opacity(0); .transition(~"opacity .2s");
+    border-radius: 3px; opacity: 0; .transition(~"opacity .2s");
     .option {
       display: block; padding: 14px 20px 14px 10px; font-size: 13px; text-align: left;
       min-width: 150px; cursor: pointer; color: @color_slategray_5; font-weight: bold;
@@ -542,7 +550,7 @@
     .options { right: 0; }
   }
   &.select_opened {
-    .options { max-height: none; .opacity(1); }
+    .options { max-height: none; opacity: 1; }
     .select_button {
       .ruicon-arrow_1_down { .rotate(180); }
     }
@@ -554,14 +562,14 @@
   .select_button, .option {
     -webkit-appearance: none; -moz-appearance: none; border: none;
     background: none; -webkit-tap-highlight-color: rgba(0,0,0,0);
-    .box_sizing(~"border-box"); .box_shadow(~"none");
+    box-sizing: border-box; box-shadow: none;
   }
   .select_button {
-    .border_radius(3px); .transition(~"border-color .2s, box-shadow .2s");
+    border-radius: 3px; .transition(~"border-color .2s, box-shadow .2s");
     display: block; position: relative; width: 100%; padding: 8px 22px 8px 8px;
     border: 1px solid #ced2d6; background: #fff; line-height: 0;
     .selected_text {
-      .box_sizing(~"border-box"); .line_clamp(1);
+      box-sizing: border-box; .line_clamp(1);
       width: 100%; height: 1.3em; line-height: 1.3em; text-align: left;
       color: @color_slategray_2; font-size: 13px; font-weight: bold;
     }
@@ -576,8 +584,8 @@
     position: absolute; top: 38px; width: 100%; max-height: 0;
     background: white; cursor: pointer; border: 1px solid @color_slategray_9;
     overflow: hidden; z-index: 300;
-    .opacity(0); .transition(~"opacity .2s"); .box_sizing(~"border-box");
-    .border_radius(3px);
+    opacity: 0; .transition(~"opacity .2s"); box-sizing: border-box;
+    border-radius: 3px;
     .option {
       display: block; padding: 10px 22px 10px 10px; width: 100%;
       font-size: 13px; text-align: left; color: @color_slategray_5; font-weight: bold;
@@ -593,9 +601,9 @@
     }
   }
   &.select_opened {
-    .options { max-height: none; .opacity(1); }
+    .options { max-height: none; opacity: 1; }
     .select_button {
-      border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
+      border-color: @color_dodgerblue_1; box-shadow: 0 0 4px 0 rgba(31, 142, 230, .1);
       .ruicon-arrow_1_down { .rotate(180); }
     }
   }
@@ -607,11 +615,11 @@
 // ===================================================================== text_input
 .rui_text_input {
   -webkit-appearance: none; -moz-appearance: none; appearance: none;
-  .box_sizing(~"border-box"); .border_radius(3px); .transition(~"border-color .2s, box-shadow .2s");
+  box-sizing: border-box; border-radius: 3px; .transition(~"border-color .2s, box-shadow .2s");
   display: inline-block; border: 1px solid @color_slategray_4; background: white;
   padding: 8px; font-size: 13px; font-weight: bold; line-height: 1.2em; color: @color_slategray_2;
   &:focus {
-    border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
+    border-color: @color_dodgerblue_1; box-shadow: 0 0 4px 0 rgba(31, 142, 230, .1);
   }
   &:disabled {
     border-color: @color_slategray_4; background: @color_slategray_6; color: @color_slategray_4;
@@ -621,12 +629,12 @@
 // ===================================================================== textarea
 .rui_textarea {
   -webkit-appearance: none; -moz-appearance: none; appearance: none;
-  .box_sizing(~"border-box"); .border_radius(3px); .transition(~"border-color .2s, box-shadow .2s");
+  box-sizing: border-box; border-radius: 3px; .transition(~"border-color .2s, box-shadow .2s");
   display: inline-block; border: 1px solid @color_slategray_4; background: white;
   padding: 7px 10px; font-size: 13px; color: @color_slategray_2; line-height: 1.6em;
   resize: vertical; overflow-y: auto;
   &:focus {
-    border-color: @color_dodgerblue_1; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
+    border-color: @color_dodgerblue_1; box-shadow: 0 0 4px 0 rgba(31, 142, 230, .1);
   }
   &:disabled {
     border-color: @color_slategray_4; background: @color_slategray_6; color: @color_slategray_4;
@@ -644,7 +652,7 @@
       border: 1px solid @color_slategray_4;
       font-size: 13px; font-weight: bold; color: @color_slategray_5;
       min-width: 2em; height: 30px; padding: 0 10px; line-height: 30px;
-      .border_radius(3px); .box_shadow(~"0 1px 1px 0 rgba(206, 210, 214, .3)");
+      border-radius: 3px; box-shadow: 0 1px 1px 0 rgba(206, 210, 214, .3);
       .transition(~"background .2s");
       .ruicon-arrow_8_left, .ruicon-arrow_8_right { vertical-align: -10%; }
     }
@@ -656,9 +664,9 @@
       }
     }
     &.page_buttons {
-      margin: 0 5px; .box_shadow(~"0 1px 1px 0 rgba(206, 210, 214, .3)"); .border_radius(3px);
+      margin: 0 5px; box-shadow: 0 1px 1px 0 rgba(206, 210, 214, .3); border-radius: 3px;
       a {
-        margin-left: -1px; position: relative; .border_radius(0); .box_shadow(~"none");
+        margin-left: -1px; position: relative; border-radius: 0; box-shadow: none;
         &.first_button {
           .border_radius_left(3px); margin-left: 0;
         }
@@ -677,7 +685,7 @@
 // ===================================================================== compact_pagenation
 .rui_compact_pagination {
   display: inline-block; cursor: default;
-  .border_radius(3px); .box_shadow(~"0 1px 1px 0 rgba(206,210,214,.3)");
+  border-radius: 3px; box-shadow: 0 1px 1px 0 rgba(206, 210, 214, .3);
   li {
     display: inline-block; margin-left: -1px;
     &:first-child {
@@ -699,7 +707,7 @@
       position: relative; border: 1px solid @color_slategray_4; .transition(~"background .2s, border-color .2s, box-shadow .2s");
       .ruicon-arrow_8_left, .ruicon-arrow_8_right { vertical-align: -10%; }
       &:focus {
-        border-color: @color_dodgerblue_1; z-index: 3; .box_shadow(~"0 0 3px 0 rgba(31,142,230,.3)");
+        border-color: @color_dodgerblue_1; z-index: 3; box-shadow: 0 0 3px 0 rgba(31, 142, 230, .3);
       }
     }
   }
@@ -708,7 +716,7 @@
 // ===================================================================== rui_view_type_button
 .rui_view_type_button {
   display: inline-block; cursor: default;
-  .box_shadow(~"0 1px 1px 0 rgba(206,210,214,.3)");
+  box-shadow: 0 1px 1px 0 rgba(206, 210, 214, .3);
   li {
     display: inline-block; margin-left: -1px;
     &:first-child {
@@ -740,7 +748,7 @@
 // ===================================================================== tooltip
 .rui_tooltip {
   display: inline-block; background: @color_bluegray_2; position: relative;
-  padding: 9px 16px; .border_radius(3px); cursor: default;
+  padding: 9px 16px; border-radius: 3px; cursor: default;
   color: white; font-size: 13px; font-weight: bold; line-height: 1.1em; white-space: nowrap;
   .ruicon-arrow_1_down {
     display: inline-block;
@@ -960,7 +968,7 @@
     padding-left: 14px; position: relative; z-index: 2;
     .more_button {
       display: inline-block; width: 70px; text-align: center; padding: 7px 14px 7px 0;
-      background: @color_slategray_2; .border_radius(2px); position: relative;
+      background: @color_slategray_2; border-radius: 2px; position: relative;
       border: 1px solid @color_slategray_2;
       font-size: 13px; color: white; font-weight: bold;
       .transition(~"background .2s");
@@ -1035,7 +1043,7 @@
 .rui_search_1 {
   padding: 7px 28px 7px 32px; background: @color_slategray_6; color: @color_slategray_5;
   position: relative; width: 200px;
-  .box_sizing(~"border-box"); .border_radius(5px); .transition(~"border-color .2s, box-shadow .2s");
+  box-sizing: border-box; border-radius: 5px; .transition(~"border-color .2s, box-shadow .2s");
   .ruicon-search, .search_input, .ruicon-close_2 {
     display: inline-block;
   }
@@ -1046,18 +1054,18 @@
   .search_input {
     background: none; border: none; vertical-align: top;
     width: 100%; font-size: 13px; color: @color_slategray_2;
-    .placeholder_style(@color_slategray_5, ~"normal"); .box_sizing(~"border-box");
+    .placeholder_style(@color_slategray_5, ~"normal"); box-sizing: border-box;
     &:active, &:focus {
       .placeholder_style(@color_slategray_4, ~"normal");
       & + .ruicon-close_2 {
-        .opacity(1);
+        opacity: 1;
       }
     }
   }
   .ruicon-close_2 {
     position: absolute; right: 9px; top: 7px;
     width: 13px; height: 15px; line-height:16px;
-    cursor: pointer; .opacity(0); .transition(~"opacity .2s");
+    cursor: pointer; opacity: 0; .transition(~"opacity .2s");
   }
 }
 
@@ -1065,7 +1073,7 @@
 .rui_full_alert_1 {
   padding-bottom: 17px; cursor: default;
   .alert_article {
-    background: @color_beige_1; border: 1px solid @color_beige_2; .border_radius(3px);
+    background: @color_beige_1; border: 1px solid @color_beige_2; border-radius: 3px;
     position: relative; padding: 26px 28px 20px 72px;
     .alert_title {
       font-size: 17px; font-weight: bold; color: @color_brown_1; position: relative;
@@ -1085,7 +1093,7 @@
     .alert_button {
       position: absolute; right: 30px; top: 30px;
       -webkit-appearance: none; background: @color_brown_1; border: 1px solid @color_brown_3;
-      padding: 16px 0 13px 0; width: 156px; text-align: center; .border_radius(3px);
+      padding: 16px 0 13px 0; width: 156px; text-align: center; border-radius: 3px;
       font-size: 15px; font-weight: bold; color: white; .transition(~"background .3s");
     }
   }
@@ -1096,7 +1104,7 @@
   padding: 10px 10px 15px 10px; border-bottom: 1px solid @color_bluegray_5;
   .alert_article {
     text-align: center; padding: 20px 10px;
-    background: @color_beige_1; border: 1px solid @color_beige_2; .border_radius(3px);
+    background: @color_beige_1; border: 1px solid @color_beige_2; border-radius: 3px;
     .alert_title {
       font-size: 17px; font-weight: bold; color: @color_brown_1;
       .ruicon-exclamation_2 {
@@ -1113,7 +1121,7 @@
     .alert_button {
       display: inline-block; margin-top: 14px;
       -webkit-appearance: none; background: @color_brown_1; border: 1px solid @color_brown_3;
-      padding: 16px 0 13px 0; width: 156px; text-align: center; .border_radius(3px);
+      padding: 16px 0 13px 0; width: 156px; text-align: center; border-radius: 3px;
       font-size: 15px; font-weight: bold; color: white;
     }
   }
@@ -1122,7 +1130,7 @@
 // ===================================================================== rui_full_alert_3
 .rui_full_alert_3 {
   .alert_article {
-    background: @color_beige_1; border: 1px solid @color_beige_2; .border_radius(3px);
+    background: @color_beige_1; border: 1px solid @color_beige_2; border-radius: 3px;
     position: relative; padding: 8px 8px 8px 35px;
     .alert_icon {
       .svg_exclamation_2(@color_brown_1);
@@ -1147,7 +1155,7 @@
 // ===================================================================== rui_full_alert_4
 .rui_full_alert_4 {
   .alert_article {
-    background: @color_slategray_6; .border_radius(3px);
+    background: @color_slategray_6; border-radius: 3px;
     padding: 27px 0; text-align: center;
     .alert_icon {
       .svg_exclamation_2(@color_slategray_4);

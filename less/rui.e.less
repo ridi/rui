@@ -18,7 +18,7 @@
 // ===================================================================== button
 .rui_button() {
   -webkit-appearance: none; -moz-appearance: none; -webkit-tap-highlight-color: rgba(0,0,0,0);
-  .box_sizing(~"border-box"); .box_shadow(~"none"); .border_radius(4px);
+  box-sizing: border-box; box-shadow: none; border-radius: 4px;
   border: none; font-weight: bold; outline: none;
   display: inline-block; text-align: center; cursor: pointer; line-height: 1em;
   &.spinner {
@@ -29,7 +29,7 @@
     }
   }
   &:disabled, &.disabled {
-    .opacity(.5); cursor: default;
+    opacity: .5; cursor: default;
   }
 }
 .rui_button_size_21() {
@@ -213,13 +213,13 @@
     @radio_size: 18px; content: ''; background: white;
     display: block; width: @radio_size; height: @radio_size; .box_sizing(~"border-box");
     position: absolute; left: 0; top: 50%; margin-top: -@radio_size / 2 - 1px;
-    .border_radius(@radio_size); border: 1px solid black;
+    border-radius: @radio_size; border: 1px solid black;
   }
   &:after {
     @radio_size: 18px / 3; content: ''; background: white;
     display: block; width: @radio_size; height: @radio_size; .box_sizing(~"border-box");
     position: absolute; left: 0; top: 50%; margin-left: @radio_size; margin-top: -@radio_size / 2 - 1px;
-    .border_radius(@radio_size);
+    border-radius: @radio_size;
   }
   &:hover {
     &:before {
@@ -267,7 +267,7 @@
     @checkbox_size: 18px; content: ''; background: white;
     display: block; width: @checkbox_size; height: @checkbox_size; .box_sizing(~"border-box");
     position: absolute; left: 0; top: 50%; margin-top: -@checkbox_size / 2 - 1px;
-    .border_radius(2px); border: 1px solid black;
+    border-radius: 2px; border: 1px solid black;
   }
   &:after {
     @checkbox_size: 18px;
@@ -294,7 +294,7 @@
   .select_button, .option {
     -webkit-appearance: none; -moz-appearance: none; border: none;
     background: none; -webkit-tap-highlight-color: rgba(0,0,0,0);
-    .box_sizing(~"content-box"); .box_shadow(~"none");
+    box-sizing: content-box; box-shadow: none;
   }
   .select_button {
     display: block; position: relative; width: 100%; height: 1em; padding: 10px 0;
@@ -308,9 +308,9 @@
     .ruicon-check_1 { display: none; }
   }
   .options {
-    max-height: 0; .opacity(0);
+    max-height: 0; opacity: 0;
     position: absolute; top: 39px; background: white; z-index: 2;
-    border: 2px solid @color_slategray_5; .border_radius(3px); overflow: hidden;
+    border: 2px solid @color_slategray_5; border-radius: 3px; overflow: hidden;
     .option {
       display: block; padding: 14px 20px 14px 10px; font-size: 13px; text-align: left;
       min-width: 150px; cursor: pointer; color: @color_slategray_5; font-weight: bold;
@@ -333,7 +333,7 @@
     .options { right: 0; }
   }
   &.select_opened {
-    .options { max-height: none; .opacity(1); }
+    .options { max-height: none; opacity: 1; }
     .select_button {
       .ruicon-arrow_1_down { .rotate(180); }
     }
@@ -345,10 +345,10 @@
   .select_button, .option {
     -webkit-appearance: none; -moz-appearance: none; border: none;
     background: none; -webkit-tap-highlight-color: rgba(0,0,0,0);
-    .box_sizing(~"border-box"); .box_shadow(~"none");
+    box-sizing: border-box; box-shadow: none;
   }
   .select_button {
-    .border_radius(3px);
+    border-radius: 3px;
     display: block; position: relative; width: 100%; padding: 8px 22px 8px 8px;
     border: 1px solid #ced2d6; background: #fff; line-height: 0;
     .selected_text {
@@ -365,9 +365,9 @@
     &:hover { border-color: @color_slategray_5; }
   }
   .options {
-    max-height: 0; .opacity(0); .box_sizing(~"border-box");
+    max-height: 0; opacity: 0; .box_sizing(~"border-box");
     position: absolute; top: 38px; background: white; z-index: 2; width: 100%; cursor: pointer;
-    border: 1px solid @color_slategray_9; .border_radius(3px); overflow: hidden;
+    border: 1px solid @color_slategray_9; border-radius: 3px; overflow: hidden;
     .option {
       display: block; padding: 10px 22px 10px 10px; width: 100%;
       font-size: 13px; text-align: left; color: @color_slategray_5; font-weight: bold;
@@ -385,9 +385,9 @@
     }
   }
   &.select_opened {
-    .options { max-height: none; .opacity(1); }
+    .options { max-height: none; opacity: 1; }
     .select_button {
-      border-color: @color_gray6; .box_shadow(~"0 0 4px 0 rgba(31, 142, 230, .1)");
+      border-color: @color_gray6; box-shadow: 0 0 4px 0 rgba(31, 142, 230, .1);
       .ruicon-arrow_1_down { .rotate(180); }
     }
   }
@@ -399,14 +399,14 @@
 // ===================================================================== text_input
 .rui_text_input {
   -webkit-appearance: none; -moz-appearance: none; appearance: none;
-  .box_sizing(~"border-box"); .border_radius(3px);
+  .box_sizing(~"border-box"); border-radius: 3px;
   display: inline-block; border: 1px solid @color_slategray_4; background: white;
   padding: 8px; font-size: 13px; font-weight: bold; line-height: 1.2em; color: @color_slategray_2;
   &:hover {
     border-color: @color_slategray_5;
   }
   &:focus {
-    border-color: @color_gray6; .box_shadow(~"0 0 4px 0 rgba(0, 0, 0, .1)");
+    border-color: @color_gray6; box-shadow: 0 0 4px 0 rgba(0, 0, 0, .1);
   }
   &:disabled {
     border-color: @color_slategray_4; background: @color_slategray_6; color: @color_slategray_4;
@@ -416,7 +416,7 @@
 // ===================================================================== textarea
 .rui_textarea {
   -webkit-appearance: none; -moz-appearance: none; appearance: none;
-  .box_sizing(~"border-box"); .border_radius(3px);
+  .box_sizing(~"border-box"); border-radius: 3px;
   display: inline-block; border: 1px solid @color_slategray_4; background: white;
   padding: 7px 10px; font-size: 13px; color: @color_slategray_2; line-height: 1.6em;
   resize: vertical; overflow-y: auto;
@@ -424,7 +424,7 @@
     border-color: @color_slategray_5;
   }
   &:focus {
-    border-color: @color_gray6; .box_shadow(~"0 0 4px 0 rgba(0, 0, 0, .1)");
+    border-color: @color_gray6; box-shadow: 0 0 4px 0 rgba(0, 0, 0, .1);
   }
   &:disabled {
     border-color: @color_slategray_4; background: @color_slategray_6; color: @color_slategray_4;
@@ -442,7 +442,7 @@
       border: 1px solid @color_grayc;
       font-size: 13px; font-weight: bold; color: black;
       min-width: 2em; height: 30px; padding: 0 10px; line-height: 30px;
-      .border_radius(3px);
+      border-radius: 3px;
       .ruicon-arrow_8_left, .ruicon-arrow_8_right {
         vertical-align: -10%;
       }
@@ -458,9 +458,9 @@
       }
     }
     &.page_buttons {
-      margin: 0 5px; .border_radius(3px);
+      margin: 0 5px; border-radius: 3px;
       a {
-        margin-left: -1px; position: relative; .border_radius(0); .box_shadow(~"none");
+        margin-left: -1px; position: relative; border-radius: 0; box-shadow: none;
         &.first_button {
           .border_radius_left(3px); margin-left: 0;
         }
@@ -479,7 +479,7 @@
 // ===================================================================== compact_pagenation
 .rui_compact_pagination {
   display: inline-block; cursor: default;
-  .border_radius(3px); .box_shadow(~"0 1px 1px 0 rgba(206,210,214,.3)");
+  border-radius: 3px; box-shadow: 0 1px 1px 0 rgba(206, 210, 214, .3);
   li {
     display: inline-block; margin-left: -1px;
     &:first-child {
@@ -504,7 +504,7 @@
         background: @color_slategray_6;
       }
       &:focus {
-        border-color: @color_dodgerblue_1; z-index: 3; .box_shadow(~"0 0 3px 0 rgba(31,142,230,.3)");
+        border-color: @color_dodgerblue_1; z-index: 3; box-shadow: 0 0 3px 0 rgba(31, 142, 230, .3);
       }
     }
   }
@@ -513,7 +513,7 @@
 // ===================================================================== rui_view_type_button
 .rui_view_type_button {
   display: inline-block; cursor: default;
-  .box_shadow(~"0 1px 1px 0 rgba(206,210,214,.3)");
+  box-shadow: 0 1px 1px 0 rgba(206, 210, 214, .3);
   li {
     display: inline-block; margin-left: -1px;
     &:first-child {
@@ -548,7 +548,7 @@
 // ===================================================================== tooltip
 .rui_tooltip {
   display: inline-block; background: @color_bluegray_2; position: relative;
-  padding: 9px 16px; .border_radius(3px); cursor: default;
+  padding: 9px 16px; border-radius: 3px; cursor: default;
   color: white; font-size: 13px; font-weight: bold; line-height: 1.1em; white-space: nowrap;
   .ruicon-arrow_1_down {
     display: inline-block;
@@ -792,7 +792,7 @@
     padding-left: 14px; position: relative; z-index: 2;
     .more_button {
       display: inline-block; width: 70px; text-align: center; padding: 7px 14px 7px 0;
-      background: @color_slategray_2; .border_radius(2px); position: relative;
+      background: @color_slategray_2; border-radius: 2px; position: relative;
       border: 1px solid @color_slategray_2;
       font-size: 13px; color: white; font-weight: bold;
       .title {}
@@ -882,7 +882,7 @@
 .rui_search_1 {
   padding: 7px 28px 7px 32px; background: @color_slategray_6; color: @color_slategray_5;
   position: relative; width: 200px;
-  .box_sizing(~"border-box"); .border_radius(5px);
+  .box_sizing(~"border-box"); border-radius: 5px;
   .ruicon-search, .search_input, .ruicon-close_2 {
     display: inline-block;
   }
@@ -897,14 +897,14 @@
     &:active, &:focus {
       .placeholder_style(@color_slategray_4, ~"normal");
       & + .ruicon-close_2 {
-        .opacity(1);
+        opacity: 1;
       }
     }
   }
   .ruicon-close_2 {
     position: absolute; right: 9px; top: 7px;
     width: 13px; height: 15px; line-height:16px;
-    cursor: pointer; .opacity(0);
+    cursor: pointer; opacity: 0;
   }
 }
 
@@ -912,7 +912,7 @@
 .rui_full_alert_1 {
   padding-bottom: 17px; cursor: default;
   .alert_article {
-    background: @color_beige_1; border: 1px solid @color_beige_2; .border_radius(3px);
+    background: @color_beige_1; border: 1px solid @color_beige_2; border-radius: 3px;
     position: relative; padding: 26px 28px 20px 72px;
     .alert_title {
       font-size: 17px; font-weight: bold; color: @color_brown_1; position: relative;
@@ -927,7 +927,7 @@
     .alert_button {
       position: absolute; right: 30px; top: 30px;
       -webkit-appearance: none; background: @color_brown_1; border: 1px solid @color_brown_3;
-      padding: 16px 0 13px 0; width: 156px; text-align: center; .border_radius(3px);
+      padding: 16px 0 13px 0; width: 156px; text-align: center; border-radius: 3px;
       font-size: 15px; font-weight: bold; color: white;
       &:hover {
         background: @color_brown_3;
@@ -941,7 +941,7 @@
   padding: 10px 10px 15px 10px; border-bottom: 1px solid @color_bluegray_5;
   .alert_article {
     text-align: center; padding: 20px 10px;
-    background: @color_beige_1; border: 1px solid @color_beige_2; .border_radius(3px);
+    background: @color_beige_1; border: 1px solid @color_beige_2; border-radius: 3px;
     .alert_title {
       font-size: 17px; font-weight: bold; color: @color_brown_1;
       .ruicon-exclamation_2 {
@@ -954,7 +954,7 @@
     .alert_button {
       display: inline-block; margin-top: 14px;
       -webkit-appearance: none; background: @color_brown_1; border: 1px solid @color_brown_3;
-      padding: 16px 0 13px 0; width: 156px; text-align: center; .border_radius(3px);
+      padding: 16px 0 13px 0; width: 156px; text-align: center; border-radius: 3px;
       font-size: 15px; font-weight: bold; color: white;
     }
   }
@@ -984,7 +984,7 @@
 // ===================================================================== rui_full_alert_4
 .rui_full_alert_4 {
   .alert_article {
-    background: #eee; .border_radius(3px);
+    background: #eee; border-radius: 3px;
     padding: 27px 0; text-align: center;
     .alert_icon {
       .svg_exclamation_2(black);
