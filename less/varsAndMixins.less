@@ -1,7 +1,6 @@
 @import "colorChips.less";
 @import "base64Image.less";
 
-//media quries
 @queries_high: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
               ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
               ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
@@ -15,102 +14,69 @@
 @queries_320px: ~"only screen and (max-width: 320px)";
 
 .bg_gradation( @start_color, @end_color ){
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@start_color), to(@end_color));/* Safari 4+, Chrome 1-9 */
-  background: -webkit-linear-gradient(top, @start_color, @end_color);/* Safari 5.1+, Mobile Safari, Chrome 10+ */
-  background: -moz-linear-gradient(top, @start_color, @end_color);/* Firefox 3.6+ */
-  background: -ms-linear-gradient(top, @start_color, @end_color);/* IE 10+ */
-  background: -o-linear-gradient(top, @start_color, @end_color);/* Opera 11.10+ */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@start_color), to(@end_color)); /* Safari 4+, Chrome 1-9 */
+  background: -webkit-linear-gradient(top, @start_color, @end_color); /* Safari 5.1+, Mobile Safari, Chrome 10+ */
+  background: -ms-linear-gradient(top, @start_color, @end_color); /* IE 10+ */
+  background: -o-linear-gradient(top, @start_color, @end_color); /* Opera 11.10+ */
+  background: linear-gradient(to bottom, @start_color, @end_color); /* W3C */
 }
 .bg_gradation_left( @start_color, @end_color ){
-  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(@start_color), to(@end_color));/* Safari 4+, Chrome 1-9 */
-  background: -webkit-linear-gradient(left, @start_color, @end_color);/* Safari 5.1+, Mobile Safari, Chrome 10+ */
-  background: -moz-linear-gradient(left, @start_color, @end_color);/* Firefox 3.6+ */
-  background: -ms-linear-gradient(left, @start_color, @end_color);/* IE 10+ */
-  background: -o-linear-gradient(left, @start_color, @end_color);/* Opera 11.10+ */
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(@start_color), to(@end_color)); /* Safari 4+, Chrome 1-9 */
+  background: -webkit-linear-gradient(left, @start_color, @end_color); /* Safari 5.1+, Mobile Safari, Chrome 10+ */
+  background: -ms-linear-gradient(left, @start_color, @end_color); /* IE 10+ */
+  background: -o-linear-gradient(left, @start_color, @end_color); /* Opera 11.10+ */
+  background: linear-gradient(to right, @start_color, @end_color); /* W3C */
 }
 
 .border_radius( @radius_num ){
   border-radius: @radius_num; 
-  -webkit-border-radius: @radius_num; 
-  -moz-border-radius: @radius_num;
 }
 
 .border_radius_top( @radius_num ){
   border-top-right-radius: @radius_num; 
-  -webkit-border-top-right-radius: @radius_num; 
-  -moz-border-top-right-radius: @radius_num;
-  border-top-left-radius: @radius_num; 
-  -webkit-border-top-left-radius: @radius_num; 
-  -moz-border-top-left-radius: @radius_num;
+  border-top-left-radius: @radius_num;
 }
 
 .border_radius_bottom( @radius_num ){
   border-bottom-right-radius: @radius_num; 
-  -webkit-border-bottom-right-radius: @radius_num; 
-  -moz-border-bottom-right-radius: @radius_num;
-  border-bottom-left-radius: @radius_num; 
-  -webkit-border-bottom-left-radius: @radius_num; 
-  -moz-border-bottom-left-radius: @radius_num;
+  border-bottom-left-radius: @radius_num;
 }
 
 .border_radius_right( @radius_num ){
   border-top-right-radius: @radius_num; 
-  -webkit-border-top-right-radius: @radius_num; 
-  -moz-border-top-right-radius: @radius_num;
-  border-bottom-right-radius: @radius_num; 
-  -webkit-border-bottom-right-radius: @radius_num; 
-  -moz-border-bottom-right-radius: @radius_num;
+  border-bottom-right-radius: @radius_num;
 }
 
 .border_radius_left( @radius_num ){
   border-top-left-radius: @radius_num; 
-  -webkit-border-top-left-radius: @radius_num; 
-  -moz-border-top-left-radius: @radius_num;
-  border-bottom-left-radius: @radius_num; 
-  -webkit-border-bottom-left-radius: @radius_num; 
-  -moz-border-bottom-left-radius: @radius_num;
+  border-bottom-left-radius: @radius_num;
 }
 
 .border_radius_top_right( @radius_num ){
   border-top-right-radius: @radius_num;
-  -webkit-border-top-right-radius: @radius_num; 
-  -moz-border-top-right-radius: @radius_num;
 }
 
 .border_radius_top_left( @radius_num ){
   border-top-left-radius: @radius_num;
-  -webkit-border-top-left-radius: @radius_num; 
-  -moz-border-top-left-radius: @radius_num;
 }
 
 .border_radius_bottom_right( @radius_num ){
   border-bottom-right-radius: @radius_num;
-  -webkit-border-bottom-right-radius: @radius_num; 
-  -moz-border-bottom-right-radius: @radius_num;
 }
 
 .border_radius_bottom_left( @radius_num ){
   border-bottom-left-radius: @radius_num;
-  -webkit-border-bottom-left-radius: @radius_num; 
-  -moz-border-bottom-left-radius: @radius_num;
 }
 
 .box_shadow( @shadow_num ){
   box-shadow: @shadow_num;
-  -webkit-box-shadow: @shadow_num;
-  -moz-box-shadow: @shadow_num;
 }
 
 .box_sizing( @box_type ){
-  box-sizing: @box_type; 
-  -moz-box-sizing: @box_type; 
-  -webkit-box-sizing: @box_type;
+  box-sizing: @box_type;
 }
 
 .opacity( @value ){
-  @ms_filter: @value * 100;
-  -ms-filter: ~'"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ms_filter})"';
-  -moz-opacity: @value;
   opacity: @value;
 }
 
@@ -157,7 +123,6 @@
 .line_clamp( @line_num: 2; ){ // 글줄 수 제한 :: @line_num = 글줄 수
   overflow: hidden;
   text-overflow: ellipsis;
-  text-overflow: -o-ellipsis-lastline;
   display: block;
   display: -webkit-box;
   -webkit-line-clamp: @line_num;
@@ -187,15 +152,15 @@
 
 .line_clamp_for_non_webkit( @line_height, @line_number, @fadeout_color: #f4f4f4 ){
   max-height: @line_height * @line_number + .1em; overflow: hidden;
-}//.line_clamp_for_non_webkit()
+}
 
 .image_sharpen(){
-  image-rendering: -moz-crisp-edges;         /* Firefox */
-  image-rendering:   -o-crisp-edges;         /* Opera */
-  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering:   -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
   image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
-}//.image_rendering_sharpen()
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}
 
 .user_select_none(){
   -webkit-user-select: none;

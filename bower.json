@@ -1,0 +1,33 @@
+{
+  "name": "rui",
+  "version": "0.1.0",
+  "description": "Ridibooks-UI",
+  "license": "MIT",
+  "authors": [
+    "nnyamm@ridi.com",
+    "junwoo.lee@ridi.com",
+    "gyujincho@ridi.com"
+  ],
+  "homepage": "https://www.ridicorp.com/rui",
+  "main": [
+    "js/rui.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "Gruntfile.js",
+    "grunt"
+  ],
+  "keywords": [
+    "ridibooks",
+    "ridi",
+    "rui",
+    "ui"
+  ],
+  "dependencies": {
+    "jquery": "3.1.1"
+  }
+}
